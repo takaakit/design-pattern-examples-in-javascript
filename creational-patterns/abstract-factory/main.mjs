@@ -50,7 +50,7 @@ else {
 
 
 // ----------
-// Factory acquisition function needs to be defined in this file to avoid circular references.
+// In order to avoid circular references, this factory acquisition function must be defined in main file, not the Factory class.
 import { ListFactory } from './list-factory/list-factory.mjs';
 import { TableFactory } from './table-factory/table-factory.mjs';
 
