@@ -1,9 +1,10 @@
 // Visitors visit a file system composed of files and directories, and displays a list of files/directories.
 'use strict';
 
-////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs   //
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs                       //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 import { DirectoryElement } from './directory-element.mjs';
 import { FileElement } from './file-element.mjs';

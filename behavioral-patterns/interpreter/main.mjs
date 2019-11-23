@@ -18,9 +18,10 @@ After  : [program [repeat 4 [forward, right]]]
 
 'use strict';
 
-////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs   //
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs                       //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 import { Head } from './head.mjs';
 import { Context } from './context.mjs';

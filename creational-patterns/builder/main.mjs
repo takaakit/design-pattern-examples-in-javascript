@@ -1,10 +1,11 @@
 // Create documents in HTML format and text format.
 'use strict';
 
-////////////////////////////////////////////////////////////
-// USAGE 1:  node --experimental-modules main.mjs plain   //
-// USAGE 2:  node --experimental-modules main.mjs html    //
-////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////
+// USAGE 1:  node main.mjs plain                 //
+// USAGE 2:  node main.mjs html                  //
+// NOTE   :  Use Node.js ver.13.2.0 or higher.   //
+///////////////////////////////////////////////////
 
 import { HTMLBuilder } from './html-builder.mjs';
 import { Director } from './director.mjs';
@@ -32,6 +33,6 @@ else {
 }
 
 function showUsage() {
-    console.log('Usage 1: node --experimental-modules main.mjs plain      <- Create a document in plain text.');
-    console.log('Usage 2: node --experimental-modules main.mjs html       <- Create a document in HTML.');
+    console.log('Usage 1: node main.mjs plain      <- Create a document in plain text.');
+    console.log('Usage 2: node main.mjs html       <- Create a document in HTML.');
 }

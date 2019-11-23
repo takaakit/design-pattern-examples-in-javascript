@@ -1,9 +1,10 @@
 // Display a character string with a decorative frame.
 'use strict';
 
-////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs   //
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs                       //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 import { MessageDisplay } from './message-display.mjs';
 import { SideFrame } from './side-frame.mjs';

@@ -1,9 +1,10 @@
 // Display only one line or display the specified number of lines.
 'use strict';
 
-////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs   //
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs                       //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 import { Display } from './display.mjs';
 import { MultiLineDisplay } from './multi-line-display.mjs';

@@ -2,9 +2,10 @@
 // In order to spend time creating a printer, call a heavy task when creating a printer instance.
 'use strict';
 
-////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs   //
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs                       //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 import { PrinterProxy } from './printer-proxy.mjs';
 

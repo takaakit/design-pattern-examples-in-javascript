@@ -1,9 +1,10 @@
 // Someone handles a trouble.
 'use strict';
 
-////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs   //
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs                       //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 import { LazySupporter } from './lazy-supporter.mjs';
 import { MoodySupporter } from './moody-supporter.mjs';

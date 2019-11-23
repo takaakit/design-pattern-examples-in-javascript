@@ -1,9 +1,10 @@
 // Add books in the bookshelf and display the names of the books in turn.
 'use strict';
 
-////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs   //
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs                       //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 import { BookShelf } from './book-shelf.mjs';
 import { Book } from './book.mjs';

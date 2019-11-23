@@ -1,9 +1,10 @@
 // Display a character string enclosed with a frame line, or drawn with an underline.
 'use strict';
 
-////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs   //
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs                       //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 import { Manager } from './framework/manager.mjs';
 import { UnderlineDisplay } from './underline-display.mjs';

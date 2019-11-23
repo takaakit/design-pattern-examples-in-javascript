@@ -1,16 +1,17 @@
 // Create a hierarchical link collection as an HTML file.
 'use strict';
 
-//////////////////////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs (Concrete Factory)  //
-// Ex.1 :  node --experimental-modules main.mjs ListFactory         //
-// Ex.2 :  node --experimental-modules main.mjs TableFactory        //
-//////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs (Concrete Factory)    //
+// Ex.1 :  node main.mjs ListFactory           //
+// Ex.2 :  node main.mjs TableFactory          //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 if (process.argv.length != 3) {
-    console.log('Usage: node --experimental-modules main.mjs (Concrete Factory)');
-    console.log('Ex.1 : node --experimental-modules main.mjs ListFactory');
-    console.log('Ex.2 : node --experimental-modules main.mjs TableFactory');
+    console.log('Usage: node main.mjs (Concrete Factory)');
+    console.log('Ex.1 : node main.mjs ListFactory');
+    console.log('Ex.2 : node main.mjs TableFactory');
 }
 else {
     const factory = getFactory(process.argv[2]);

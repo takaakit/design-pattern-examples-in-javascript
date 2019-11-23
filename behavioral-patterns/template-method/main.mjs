@@ -1,9 +1,10 @@
 // Display the character and string repeatedly 5 times.
 'use strict';
 
-////////////////////////////////////////////////////
-// USAGE:  node --experimental-modules main.mjs   //
-////////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// USAGE:  node main.mjs                       //
+// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+/////////////////////////////////////////////////
 
 import { CharDisplay } from './char-display.mjs';
 import { StringDisplay } from './string-display.mjs';
