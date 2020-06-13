@@ -17,7 +17,7 @@ const william = new MoodySupporter('William');
 const amelia = new SpecialSupporter('Amelia', 153);
 const michael = new SpecialSupporter('Michael', 340);
 const joseph = new LimitedSupporter('Joseph', 250);
-const lily = new LimitedSupporter('Lily', 250);
+const lily = new LimitedSupporter('Lily', 350);
 
 // Make a chain.
 emily.setNext(william).setNext(amelia).setNext(michael).setNext(joseph).setNext(lily);
