@@ -4,7 +4,7 @@
 /////////////////////////////////////////////////
 // USAGE:  node main.mjs (digits)              //
 // Ex.  :  node main.mjs 1212123               //
-// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+// NOTE :  Use Node.js ver.12.17.0 or higher.  //
 /////////////////////////////////////////////////
 
 import { LargeSizeString } from './large-size-string.mjs';

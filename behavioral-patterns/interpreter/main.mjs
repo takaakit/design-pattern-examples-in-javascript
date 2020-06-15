@@ -20,7 +20,7 @@ After  : [program [repeat 4 [forward, right]]]
 
 /////////////////////////////////////////////////
 // USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+// NOTE :  Use Node.js ver.12.17.0 or higher.  //
 /////////////////////////////////////////////////
 
 import { Head } from './head.mjs';

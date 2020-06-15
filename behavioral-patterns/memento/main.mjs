@@ -9,7 +9,7 @@ Dice game collecting fruits.
 
 /////////////////////////////////////////////////
 // USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+// NOTE :  Use Node.js ver.12.17.0 or higher.  //
 /////////////////////////////////////////////////
 
 import { Gamer } from './gamer.mjs';

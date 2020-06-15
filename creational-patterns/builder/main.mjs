@@ -4,7 +4,7 @@
 ///////////////////////////////////////////////////
 // USAGE 1:  node main.mjs plain                 //
 // USAGE 2:  node main.mjs html                  //
-// NOTE   :  Use Node.js ver.13.2.0 or higher.   //
+// NOTE   :  Use Node.js ver.12.17.0 or higher.  //
 ///////////////////////////////////////////////////
 
 import { HTMLBuilder } from './html-builder.mjs';

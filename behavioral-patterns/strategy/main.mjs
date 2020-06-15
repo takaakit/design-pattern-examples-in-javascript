@@ -9,7 +9,7 @@ There are two strategies below.
 
 /////////////////////////////////////////////////
 // USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+// NOTE :  Use Node.js ver.12.17.0 or higher.  //
 /////////////////////////////////////////////////
 
 import { Player } from './player.mjs';

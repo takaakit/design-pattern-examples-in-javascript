@@ -5,7 +5,7 @@
 // USAGE:  node main.mjs (Concrete Factory)    //
 // Ex.1 :  node main.mjs ListFactory           //
 // Ex.2 :  node main.mjs TableFactory          //
-// NOTE :  Use Node.js ver.13.2.0 or higher.   //
+// NOTE :  Use Node.js ver.12.17.0 or higher.  //
 /////////////////////////////////////////////////
 
 if (process.argv.length != 3) {

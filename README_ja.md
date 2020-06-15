@@ -66,7 +66,7 @@ export class FileElement extends FileSystemElement {
 
 **JavaScript 開発環境**
 * JavaScript の開発環境を用意してください。[Visual Studio Code](https://code.visualstudio.com/download) など。
-* [Node.js](https://nodejs.org/ja/) をインストールしてください。Node.js ver.13.2.0 以降を使用してください。
+* [Node.js](https://nodejs.org/ja/) をインストールしてください。Node.js ver.12.17.0 以降を使用してください。
 
 使い方
 ------
