@@ -22,7 +22,7 @@ export class SpecialSupporter extends Supporter {
     // Troubles with the specific ID are handled.
     handle(trouble) {
         // ˅
-        return trouble.id == this.targetId;
+        return trouble.id === this.targetId;
         // ˄
     }
 
