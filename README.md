@@ -65,8 +65,8 @@ Installation
   **Use ver.2.5.0 or higher.**
 
 **Development Environment for JavaScript**
-* Prepare a development environment for JavaScript (e.g. [Visual Studio Code](https://code.visualstudio.com/download)).
-* Install the [Node.js](https://nodejs.org/en/). Use Node.js ver.12.17.0 or higher.
+* Install [Visual Studio Code](https://code.visualstudio.com/download).
+* Install [Node.js](https://nodejs.org/en/) ver.12.17.0 or higher.
 
 Usage
 -----
