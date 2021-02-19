@@ -59,7 +59,7 @@ export class AppLogin extends Mediator {
         // ˅
         if (event.currentTarget === document.getElementById('buttonOk')
                 || event.currentTarget === document.getElementById('buttonCancel')) {
-            window.open('','_self').close();
+            document.body.innerHTML = "<h1>Dialog terminated.</h1>"
         }
         else {
             if (event.currentTarget === document.getElementById('radioGuest')) { // Guest mode
