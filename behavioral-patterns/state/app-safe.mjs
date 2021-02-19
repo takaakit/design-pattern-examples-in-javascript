@@ -83,6 +83,7 @@ export class AppSafe extends Context {
     callSecurityGuardsRoom(message) {
         // ˅
         this.textMessage.value += 'call! ' + message + '\n';
+        this.textMessage.scrollTop = this.textMessage.scrollHeight;     // Scroll to the bottom
         // ˄
     }
 
@@ -90,6 +91,7 @@ export class AppSafe extends Context {
     recordSecurityLog(message) {
         // ˅
         this.textMessage.value += 'record ... ' + message + '\n';
+        this.textMessage.scrollTop = this.textMessage.scrollHeight;     // Scroll to the bottom
         // ˄
     }
 
