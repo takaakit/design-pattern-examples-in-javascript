@@ -16,7 +16,6 @@ export class FrameDisplay extends Display {
         // ˅
         super();
         this.borderChar = borderChar;
-        
         // ˄
     }
 
@@ -29,17 +28,15 @@ export class FrameDisplay extends Display {
     show(message) {
         // ˅
         const length = message.length;
-        var upperLine = '';
         for (let i = 0; i < length + 4; i++) {
-            upperLine += this.borderChar;
+            process.stdout.write(this.borderChar);
         }
-        console.log(upperLine);
+        console.log();
         console.log(this.borderChar + ' ' + message + ' ' + this.borderChar);
-        var buttonLine = '';
-        for (var i = 0; i < length + 4; i++) {
-            buttonLine += this.borderChar;
+        for (let i = 0; i < length + 4; i++) {
+            process.stdout.write(this.borderChar);
         }
-        console.log(buttonLine);
+        console.log();
         // ˄
     }
 

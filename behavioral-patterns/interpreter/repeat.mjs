@@ -27,16 +27,20 @@ export class Repeat extends Node {
     parse(context) {
         // ˅
 		context.slideToken('repeat');
+        
 		this.number = context.getNumber();
-		context.nextToken();
-		this.commandList = new CommandList();
-		this.commandList.parse(context);
+		context.slideToken(String(this.number));
+
+        const aCommandList = new CommandList();
+		aCommandList.parse(context);
+
+        this.commandList = aCommandList;    // Hold the parsed command list
         // ˄
     }
 
     toString() {
         // ˅
-		return '[repeat ' + this.number + ' ' + this.commandList + ']';
+		return 'repeat ' + this.number + ' ' + this.commandList;
         // ˄
     }
 

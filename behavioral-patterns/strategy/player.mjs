@@ -1,6 +1,8 @@
 // ˅
 'use strict';
 
+import { GameResultType } from './game-result-type.mjs';
+
 // ˄
 
 export class Player {
@@ -28,35 +30,31 @@ export class Player {
         // ˄
     }
 
-    // Calculate a hand from the strategy.
-    nextHand() {
+    // Show a hand signal from the strategy.
+    showHandSignal() {
         // ˅
-        return this.strategy.nextHand();
+        return this.strategy.showHandSignal();
         // ˄
     }
 
-    // Won a game.
-    won() {
+    // Notify a game result.
+    notifyGameResult(result, ownHand, opponentsHand) {
         // ˅
-        this.strategy.learn(true);
-        this.winCount++;
-        this.gameCount++;
-        // ˄
-    }
+        switch (result) {
+            case GameResultType.Win:
+                this.winCount++;
+                this.gameCount++;
+                break;
+            case GameResultType.Loss:
+                this.lossCount++;
+                this.gameCount++;
+                break;
+            case GameResultType.Draw:
+                this.gameCount++;
+                break;
+        }
 
-    // Lost a game.
-    lost() {
-        // ˅
-        this.strategy.learn(false);
-        this.lossCount++;
-        this.gameCount++;
-        // ˄
-    }
-
-    // Drew a game.
-    drew() {
-        // ˅
-        this.gameCount++;
+        this.strategy.notifyGameResult(result, ownHand, opponentsHand);
         // ˄
     }
 

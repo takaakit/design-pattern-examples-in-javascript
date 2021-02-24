@@ -1,38 +1,33 @@
-// Represents a file system composed of files and directories.
+/*
+Represents a file system composed of files and directories. "FileSystemElement" makes it possible to treat "File" and "Directory" uniformly.
+ */
 'use strict';
-
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
 
 import { DirectoryElement } from './directory-element.mjs';
 import { FileElement } from './file-element.mjs';
 
 console.log('Create a file system...');
-const rootDir = new DirectoryElement('root');
-const homeDir = new DirectoryElement('home');
+
 const binDir = new DirectoryElement('bin');
-const etcDir = new DirectoryElement('etc');
+const lsFile = new FileElement('ls', 20);
+binDir.add(lsFile);
+const mkdirFile = new FileElement('mkdir', 40);
+binDir.add(mkdirFile);
+
 const emilyDir = new DirectoryElement('emily');
+const homeworkFile = new FileElement('homework.doc', 60);
+emilyDir.add(homeworkFile);
+
 const jamesDir = new DirectoryElement('james');
-const oliviaDir = new DirectoryElement('olivia');
+const appFile = new FileElement('app.exe', 80);
+jamesDir.add(appFile);
 
-rootDir.add(homeDir);
-rootDir.add(binDir);
-rootDir.add(etcDir);
-
-binDir.add(new FileElement('ls', 100));
-binDir.add(new FileElement('mkdir', 50));
+const homeDir = new DirectoryElement('home');
 homeDir.add(emilyDir);
 homeDir.add(jamesDir);
-homeDir.add(oliviaDir);
 
-emilyDir.add(new FileElement('homework.doc', 40));
-jamesDir.add(new FileElement('homework.doc', 50));
-jamesDir.add(new FileElement('app.exe', 60));
-oliviaDir.add(new FileElement('homework.doc', 70));
-oliviaDir.add(new FileElement('app.exe', 80));
-oliviaDir.add(new FileElement('tips.html', 90));
+const rootDir = new DirectoryElement('root');
+rootDir.add(homeDir);
+rootDir.add(binDir);
 
 rootDir.print('');

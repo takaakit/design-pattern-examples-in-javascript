@@ -1,18 +1,13 @@
-// Observers observe objects generating a numerical value and display the value.
+/*
+Observers observe objects generating a numerical value and display the value. The display formats are digits and bar charts.
+ */
 'use strict';
 
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
-
-import { RandomNumber } from './random-number.mjs';
+import { RandomNumberValue } from './random-number-value.mjs';
 import { DigitObserver } from './digit-observer.mjs';
 import { BarChartObserver } from './bar-chart-observer.mjs';
 
-const randomNumber = new RandomNumber();
-const digitObserver = new DigitObserver();
-const barChartObserver = new BarChartObserver();
-randomNumber.addObserver(digitObserver);
-randomNumber.addObserver(barChartObserver);
-randomNumber.generate();
+const randomNumberValue = new RandomNumberValue();
+randomNumberValue.addObserver(new DigitObserver());
+randomNumberValue.addObserver(new BarChartObserver());
+randomNumberValue.generate();

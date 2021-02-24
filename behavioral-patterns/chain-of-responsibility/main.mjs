@@ -7,11 +7,6 @@ A trouble is turned around among supporters, and the trouble will be handled by 
  */
 'use strict';
 
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
-
 import { LazySupporter } from './lazy-supporter.mjs';
 import { MoodySupporter } from './moody-supporter.mjs';
 import { SpecialSupporter } from './special-supporter.mjs';

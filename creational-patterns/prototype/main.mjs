@@ -1,25 +1,23 @@
-// Display a character string enclosed with a frame line, or drawn with an underline.
+/*
+Display a string enclosed with a frame line, or drawn with an underline. The client("Main") registers instances of the "Display" subclass in the "Manager" class. When necessary, the "Manager" class asks those registered instances to return a clone. The client("Main") requires the returned clones to display.
+ */
 'use strict';
-
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
 
 import { Manager } from './framework/manager.mjs';
 import { UnderlineDisplay } from './underline-display.mjs';
 import { FrameDisplay } from './frame-display.mjs';
 
-// Create a manager
 const manager = new Manager();
+
+// Register instances of the "Display" subclass
 const emphasisUnderline = new UnderlineDisplay('~');
-const highlightFrame = new FrameDisplay('+');
-const warningFrame = new FrameDisplay('#');
 manager.registerDisplay('emphasis', emphasisUnderline);
+const highlightFrame = new FrameDisplay('+');
 manager.registerDisplay('highlight', highlightFrame);
+const warningFrame = new FrameDisplay('#');
 manager.registerDisplay('warning', warningFrame);
 
-// Create displays
+// Require to display
 const display1 = manager.getDisplay('emphasis');
 display1.show('Nice to meet you.');
 const display2 = manager.getDisplay('highlight');

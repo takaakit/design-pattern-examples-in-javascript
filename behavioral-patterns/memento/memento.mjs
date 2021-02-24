@@ -9,22 +9,17 @@ export class Memento {
     // ˄
 
     // Money
-    money;
-
-    // Desserts
-    desserts;
+    _money;
 
     constructor(money) {
         // ˅
-		this.money = money;
-		this.desserts = new Array();
+		this._money = money;
         // ˄
     }
 
-    // Add a dessert
-    addDessert(dessert) {
+    get money() {
         // ˅
-		this.desserts.push(dessert);
+        return this._money;
         // ˄
     }
 

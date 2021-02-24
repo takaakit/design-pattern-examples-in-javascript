@@ -8,9 +8,13 @@ export class FileSystemElement {
     
     // ˄
 
-    name;
+    get name() {
+        throw new Error('An abstract method has been executed.');
+    }
 
-    size;
+    get size() {
+        throw new Error('An abstract method has been executed.');
+    }
 
     // Print this element with the "upperPath".
     print(upperPath) {

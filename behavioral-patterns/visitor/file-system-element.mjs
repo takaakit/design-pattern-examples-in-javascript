@@ -10,19 +10,15 @@ export class FileSystemElement extends Element {
     
     // ˄
 
-    _name;
-
-    _size;
+    accept(visitor) {
+        throw new Error('An abstract method has been executed.');
+    }
 
     get name() {
         throw new Error('An abstract method has been executed.');
     }
 
     get size() {
-        throw new Error('An abstract method has been executed.');
-    }
-
-    accept(visitor) {
         throw new Error('An abstract method has been executed.');
     }
 

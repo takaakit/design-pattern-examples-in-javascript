@@ -21,7 +21,15 @@ export class PrinterProxy extends Printer {
         super();
         this.currentName = name;
         this.real = null;
-        
+        // ˄
+    }
+
+    output(content) {
+        // ˅
+        if (this.real == null) {
+            this.real = new RealPrinter(this.currentName);
+        }
+        this.real.output(content);
         // ˄
     }
 
@@ -37,24 +45,6 @@ export class PrinterProxy extends Printer {
             this.real.printerName = printerName;
         }
         this.currentName = printerName;
-        // ˄
-    }
-
-    output(content) {
-        // ˅
-        this.createPrinter();
-        if (this.real != null) {
-            this.real.output(content);
-        }
-        // ˄
-    }
-
-    // Create an actual printer
-    createPrinter() {
-        // ˅
-        if (this.real == null) {
-            this.real = new RealPrinter(this.currentName);
-        }
         // ˄
     }
 

@@ -25,7 +25,7 @@ export class Supporter {
     // Troubles are sent around.
     support(trouble) {
         // ˅
-        if (this.handle(trouble)) {
+        if (this.canHandle(trouble)) {
             this.supported(trouble);
         }
         else if (this.next != null) {
@@ -51,7 +51,7 @@ export class Supporter {
         // ˄
     }
 
-    handle(trouble) {
+    canHandle(trouble) {
         throw new Error('An abstract method has been executed.');
     }
 

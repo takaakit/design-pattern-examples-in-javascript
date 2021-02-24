@@ -10,11 +10,21 @@ export class FileElement extends FileSystemElement {
     
     // ˄
 
+    _name;
+
+    _size;
+
     constructor(name, size) {
         // ˅
         super();
         this._name = name;
         this._size = size;
+        // ˄
+    }
+
+    accept(visitor) {
+        // ˅
+        visitor.visitFile(this);
         // ˄
     }
 
@@ -28,12 +38,6 @@ export class FileElement extends FileSystemElement {
     get size() {
         // ˅
         return this._size;
-        // ˄
-    }
-
-    accept(visitor) {
-        // ˅
-        visitor.visitFile(this);
         // ˄
     }
 

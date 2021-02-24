@@ -10,6 +10,8 @@ export class DirectoryElement extends FileSystemElement {
     
     // ˄
 
+    _name;
+
     // Collection of elements
     elements;
 
@@ -18,6 +20,13 @@ export class DirectoryElement extends FileSystemElement {
         super();
         this._name = name;
         this.elements = new Array();
+        // ˄
+    }
+
+    // Accept a visitor
+    accept(visitor) {
+        // ˅
+        visitor.visitDirectory(this);
         // ˄
     }
 
@@ -30,7 +39,7 @@ export class DirectoryElement extends FileSystemElement {
 
     get size() {
         // ˅
-        var value = 0;
+        let value = 0;
         for (let element of this.elements) {
             value += element.size;
         }
@@ -38,18 +47,17 @@ export class DirectoryElement extends FileSystemElement {
         // ˄
     }
 
-    // Accept a visitor
-    accept(visitor) {
-        // ˅
-        visitor.visitDirectory(this);
-        // ˄
-    }
-
-    // Add an entry
+    // Add an element
     add(element) {
         // ˅
         this.elements.push(element);
         return this;
+        // ˄
+    }
+
+    iterator() {
+        // ˅
+        return this.elements[Symbol.iterator]();
         // ˄
     }
 

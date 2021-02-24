@@ -1,43 +1,41 @@
 /*
-A game of rock-scissors-paper.
-There are two strategies below.
-
-* When winning a game, show the same hand at the next time.
-* Calculate a hand from the previous hand stochastically.
-*/
+A game of rock-scissors-paper. Two strategies are available:
+* Random Strategy: showing a random hand signal.
+* Mirror Strategy: showing a hand signal from the previous opponent's hand signal.
+ */
 'use strict';
 
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
-
 import { Player } from './player.mjs';
-import { StrategyA } from './strategy-a.mjs';
-import { StrategyB } from './strategy-b.mjs';
+import { RandomStrategy } from './random-strategy.mjs';
+import { MirrorStrategy } from './mirror-strategy.mjs';
+import { GameResultType } from './game-result-type.mjs';
 
-const player1 = new Player('Emily', new StrategyA());
-const player2 = new Player('James', new StrategyB());
+const player1 = new Player('Emily', new RandomStrategy());
+const player2 = new Player('James', new MirrorStrategy());
 
 for (let i = 0; i < 100; i++) {
-    const nextHand1 = player1.nextHand();
-    const nextHand2 = player2.nextHand();
-    if (nextHand1.isStrongerThan(nextHand2)) {
+    const handOfPlayer1 = player1.showHandSignal();
+    const handOfPlayer2 = player2.showHandSignal();
+    let resultOfPlayer1;
+    let resultOfPlayer2;
+    if (handOfPlayer1.isStrongerThan(handOfPlayer2)) {
         console.log('Winner: ' + player1.toString());
-        player1.won();
-        player2.lost();
+        resultOfPlayer1 = GameResultType.Win;
+        resultOfPlayer2 = GameResultType.Loss;
     }
-    else if (nextHand2.isStrongerThan(nextHand1)) {
+    else if (handOfPlayer2.isStrongerThan(handOfPlayer1)) {
         console.log('Winner: ' + player2.toString());
-        player1.lost();
-        player2.won();
+        resultOfPlayer1 = GameResultType.Loss;
+        resultOfPlayer2 = GameResultType.Win;
     }
     else {
         console.log('Draw...');
-        player1.drew();
-        player2.drew();        
+        resultOfPlayer1 = GameResultType.Draw;
+        resultOfPlayer2 = GameResultType.Draw;
     }
-    console.log('RESULT:');
-    console.log(player1.toString());
-    console.log(player2.toString());
+    player1.notifyGameResult(resultOfPlayer1, handOfPlayer1, handOfPlayer2);
+    player2.notifyGameResult(resultOfPlayer2, handOfPlayer2, handOfPlayer1);
 }
+console.log('RESULT:');
+console.log(player1.toString());
+console.log(player2.toString());

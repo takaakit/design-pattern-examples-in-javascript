@@ -15,17 +15,20 @@ export class PaintingCanvas extends PaintingTarget {
     // Radius of the painting point
     POINT_RADIUS;
 
-    canvas;
+    width;
+
+    height;
 
     context;
 
-    constructor(canvas, context) {
+    constructor(context, width, height) {
         // ˅
         super();
         this.COLOR = 'lightgreen';
         this.POINT_RADIUS = 10;
-        this.canvas = canvas;
         this.context = context;
+        this.width = width;
+        this.height = height;
         // ˄
     }
 
@@ -40,7 +43,7 @@ export class PaintingCanvas extends PaintingTarget {
 
     clear() {
         // ˅
-        this.context.clearRect(0, 0, this.canvas.getBoundingClientRect().width, this.canvas.getBoundingClientRect().height);
+        this.context.clearRect(0, 0, this.width, this.height);
         // ˄
     }
 

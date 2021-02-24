@@ -1,45 +1,35 @@
 /*
-Dice game collecting fruits.
-
+A dice game in which money increases and decreases:
 * A gamer shakes a dice and the number determine the next state.
-* Gamer's money increases or decreases depending on the number. The gamer sometimes gets desserts.
-* The game is over if the gamer's money runs out.
-*/
+* If the number of dice is even, gamer's money doubles, and if it is odd, gamer's money is halved.
+* If the gamer's money is less than half of the highest amount, it returns to the highest amount.
+* The game is repeated.
+ */
 'use strict';
 
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
-
 import { Gamer } from './gamer.mjs';
+import sleep from 'sleep';
 
-const gamer = new Gamer(100);				// The initial money is 100
-var memento = gamer.createMemento();		// Save the initial state
-var loopCount = 0;
+const gamer = new Gamer(100);			// The initial money is 100
+let memento = gamer.createMemento();	// Save the initial state
 
-let id = setInterval(() => {
-	console.log('==== ' + loopCount);					// Display count
-	console.log('Current state: ' + gamer.toString());	// Display the current state of the gamer
+for (let i = 0; i < 10; i++) {
+	console.log('==== Turn ' + (i + 1));		// Display count
 
-	gamer.play();										// Play a game
-
-	console.log('Gamer\'s money is ' + gamer.money + '.');
+	gamer.play();								// Play a game
 
 	// Determine the behavior of the Memento
 	if (gamer.money > memento.money) {
-		console.log('(Save the current state because money has increased.)');
+		console.log('(Gamers\' money is the highest ever, so record the current state.)');
 		memento = gamer.createMemento();
 	}
 	else if (gamer.money < memento.money / 2) {
-		console.log('(Go back to the previous state because money has decreased.)');
-		gamer.restoreMemento(memento);
+		console.log('(Gamer\'s money is less than half of the highest amount, so return to the recorded state.)');
+		gamer.setMemento(memento);
+		console.log('Gamer\'s money returns to ' + gamer.money + '.');
 	}
+
 	console.log('');
 
-	loopCount++;
-	if (loopCount >= 100) {
-		clearInterval(id);
-	}
-
-}, 1000);
+	sleep.sleep(1);
+}

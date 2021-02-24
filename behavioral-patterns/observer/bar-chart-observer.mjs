@@ -2,22 +2,25 @@
 'use strict';
 
 import { Observer } from './observer.mjs';
+import sleep from 'sleep';
 
 // ˄
 
-// Display values with a bar chart.
+// Display number values with a bar chart.
 export class BarChartObserver extends Observer {
     // ˅
     
     // ˄
 
-    update(value) {
+    update(numberValue) {
         // ˅
-		var barChart = 'Bar chart: ';
-		for (var i = 0; i < value.valueNumber; i++) {
+		let barChart = 'Bar chart: ';
+		for (let i = 0; i < numberValue.value; i++) {
 			barChart += '*';
 		}
 		console.log(barChart);
+
+        sleep.msleep(100);   // Wait 100ms
         // ˄
     }
 

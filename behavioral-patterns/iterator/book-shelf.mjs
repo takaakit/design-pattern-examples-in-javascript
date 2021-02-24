@@ -11,7 +11,7 @@ export class BookShelf extends Aggregate {
     
     // ˄
 
-    numberOfBooks;
+    _numberOfBooks;
 
     books;
 
@@ -19,7 +19,7 @@ export class BookShelf extends Aggregate {
         // ˅
         super();
 		this.books = new Array(maxsize);
-		this.numberOfBooks = 0;
+		this._numberOfBooks = 0;
         // ˄
     }
 
@@ -37,8 +37,14 @@ export class BookShelf extends Aggregate {
 
     add(book) {
         // ˅
-		this.books[this.numberOfBooks] = book;
-		this.numberOfBooks++;
+		this.books[this._numberOfBooks] = book;
+		this._numberOfBooks++;
+        // ˄
+    }
+
+    get numberOfBooks() {
+        // ˅
+        return this._numberOfBooks;
         // ˄
     }
 

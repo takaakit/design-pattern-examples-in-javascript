@@ -15,7 +15,6 @@ export class ColleagueRadioButton extends Colleague {
     constructor(radioButton) {
         // ˅
         super();
-        this.mediator = null;
         this.radioButton = radioButton;
         this.radioButton.addEventListener('click', (event) => this.clickRadioButton(event));
         // ˄
@@ -30,7 +29,7 @@ export class ColleagueRadioButton extends Colleague {
 
     clickRadioButton(event) {
         // ˅
-        this.mediator.colleagueChanged(event);
+        this._mediator.colleagueChanged(event);
         // ˄
     }
 

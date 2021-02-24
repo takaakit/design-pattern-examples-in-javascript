@@ -1,19 +1,22 @@
-// First, create instances for displaying large size characters, then display large size character string using that instances.
+/*
+Display a string consisting of large characters. Large character objects are not created until they are needed. And the created objects are reused.
+ */
 'use strict';
 
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs (digits)              //
-// Ex.  :  node main.mjs 1212123               //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
-
 import { LargeSizeString } from './large-size-string.mjs';
+import rl from 'readline';
 
-if (process.argv.length != 3) {
-    console.log('Usage: node main.mjs (digits)');
-    console.log('Ex.  : node main.mjs 1212123');
-}
-else {
-    const bs = new LargeSizeString(process.argv[2]);
+console.log('Please enter digits (ex. 1212123):');
+
+const readline = rl.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+readline.question('', (data) => {
+    const input = data;
+    readline.close();
+
+    const bs = new LargeSizeString(input);
     bs.display();
-}
+});

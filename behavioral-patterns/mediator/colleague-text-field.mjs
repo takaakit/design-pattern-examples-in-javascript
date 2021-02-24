@@ -15,7 +15,6 @@ export class ColleagueTextField extends Colleague {
     constructor(textArea) {
         // ˅
         super();
-        this.mediator = null;
         this.textArea = textArea;
         this.textArea.addEventListener('input', (event) => this.inputTextArea(event));
         // ˄
@@ -36,7 +35,7 @@ export class ColleagueTextField extends Colleague {
 
     inputTextArea(event) {
         // ˅
-        this.mediator.colleagueChanged(event);
+        this._mediator.colleagueChanged(event);
         // ˄
     }
 

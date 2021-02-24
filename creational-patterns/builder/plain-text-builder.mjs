@@ -10,15 +10,11 @@ export class PlainTextBuilder extends Builder {
     
     // ˄
 
-    // String to output
-    result;
-
     builder;
 
     constructor() {
         // ˅
         super();
-        this.result = '';
         this.builder = new Array();
         // ˄
     }
@@ -53,7 +49,13 @@ export class PlainTextBuilder extends Builder {
     close() {
         // ˅
         this.builder.push('--------------------------------');  // Decoration line
-        this.result = this.builder.join('\n');
+        // ˄
+    }
+
+    // String to output
+    getContent() {
+        // ˅
+        return this.builder.join('\n');
         // ˄
     }
 

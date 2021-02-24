@@ -67,6 +67,9 @@ Installation
 **Development Environment for JavaScript**
 * Install [Visual Studio Code](https://code.visualstudio.com/download).
 * Install [Node.js](https://nodejs.org/en/) ver.12.17.0 or higher.
+* After installing Node.js, install Sleep module with the following commands.  
+`cd <this directory (design-pattern-examples-in-javascript)>`  
+`npm install sleep`  
 
 Usage
 -----

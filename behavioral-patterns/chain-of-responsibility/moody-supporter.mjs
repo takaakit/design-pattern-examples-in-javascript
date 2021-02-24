@@ -17,7 +17,7 @@ export class MoodySupporter extends Supporter {
     }
 
     // Troubles with an odd ID are handled.
-    handle(trouble) {
+    canHandle(trouble) {
         // ˅
         return trouble.id % 2 === 1;
         // ˄

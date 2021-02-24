@@ -33,9 +33,14 @@ export class ListVisitor extends Visitor {
         console.log(this.currentDirectory + '/' + directory.toString());
         const visitedDirectory = this.currentDirectory;
         this.currentDirectory = this.currentDirectory + '/' + directory.name;
-        for (let element of directory.elements) {
-            element.accept(this);
+
+        const iterator = directory.iterator();
+        let result = iterator.next();
+        while(!result.done) {
+            result.value.accept(this);
+            result = iterator.next();
         }
+
         this.currentDirectory = visitedDirectory;
         // ˄
     }

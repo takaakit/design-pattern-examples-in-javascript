@@ -2,18 +2,21 @@
 'use strict';
 
 import { Observer } from './observer.mjs';
+import sleep from 'sleep';
 
 // ˄
 
-// Display values with digits.
+// Display number values with digits.
 export class DigitObserver extends Observer {
     // ˅
     
     // ˄
 
-    update(value) {
+    update(numberValue) {
         // ˅
-		console.log('Digit    : ' + value.valueNumber);
+		console.log('Digit    : ' + numberValue.value);
+
+        sleep.msleep(100);   // Wait 100ms
         // ˄
     }
 

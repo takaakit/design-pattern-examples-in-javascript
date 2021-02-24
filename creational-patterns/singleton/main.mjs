@@ -1,10 +1,7 @@
-// Check whether the same instance is obtained.
+/*
+Check whether the same instance is obtained.
+ */
 'use strict';
-
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
 
 import { Singleton } from './singleton.mjs';
 

@@ -13,7 +13,6 @@ export class Display {
     constructor(impl) {
         // ˅
         this.impl = impl;
-        
         // ˄
     }
 

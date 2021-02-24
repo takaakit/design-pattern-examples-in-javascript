@@ -23,14 +23,17 @@ export class Command extends Node {
 
     parse(context) {
         // ˅
+        let aNode;
 		if (context.getToken() === 'repeat') {
-			this.node = new Repeat();
-			this.node.parse(context);
+			aNode = new Repeat();
+			aNode.parse(context);
 		}
 		else {
-			this.node = new Action();
-			this.node.parse(context);
+			aNode = new Action();
+			aNode.parse(context);
 		}
+
+        this.node = aNode;  // Hold the parsed node
         // ˄
     }
 

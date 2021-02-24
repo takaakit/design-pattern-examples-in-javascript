@@ -3,7 +3,7 @@
 
 // ˄
 
-// Analyze the syntax
+// Hold data which will be interpreted.
 export class Context {
     // ˅
     

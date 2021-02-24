@@ -8,7 +8,7 @@ export class Observer {
     
     // ˄
 
-    update(value) {
+    update(numberValue) {
         throw new Error('An abstract method has been executed.');
     }
 

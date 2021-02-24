@@ -13,7 +13,6 @@ export class Manager {
     constructor() {
         // ˅
         this.display = new Map();
-        
         // ˄
     }
 

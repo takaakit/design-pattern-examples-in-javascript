@@ -16,7 +16,6 @@ export class UnderlineDisplay extends Display {
         // ˅
         super();
         this.underlineChar = underlineChar;
-        
         // ˄
     }
 
@@ -30,11 +29,11 @@ export class UnderlineDisplay extends Display {
         // ˅
         const length = message.length;
         console.log('"' + message + '"');
-        var line = ' ';
+        process.stdout.write(' ');
         for (let i = 0; i < length; i++) {
-            line += this.underlineChar;
+            process.stdout.write(this.underlineChar);
         }
-        console.log(line);
+        console.log();
         // ˄
     }
 

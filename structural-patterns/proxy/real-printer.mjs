@@ -2,6 +2,7 @@
 'use strict';
 
 import { Printer } from './printer.mjs';
+import sleep from 'sleep';
 
 // ˄
 
@@ -20,25 +21,31 @@ export class RealPrinter extends Printer {
         // ˄
     }
 
+    // Display a content with the name
+    output(content) {
+        // ˅
+        console.log('==========');
+        console.log(content);
+        console.log('Printed by ' + this._printerName);
+        console.log('==========');
+        // ˄
+    }
+
     set printerName(name) {
         // ˅
         this._printerName = name;
         // ˄
     }
 
-    // Display a content with the name
-    output(content) {
-        // ˅
-        console.log('=== ' + this.printerName + ' ===');
-        console.log(content);
-        // ˄
-    }
-
     // Heavy task (Please think so...)
     heavyTask(message) {
         // ˅
-        console.log(message);
-        console.log('Done heavy task.');
+        process.stdout.write(message);
+        for (let i = 0; i < 10; i++) {
+            sleep.msleep(500);   // Wait 500ms
+            process.stdout.write('.');
+        }
+        console.log('Done.');
         // ˄
     }
 

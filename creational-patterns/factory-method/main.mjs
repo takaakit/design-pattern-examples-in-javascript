@@ -1,12 +1,9 @@
-// Factory to make ID cards.
+/*
+The subject is a factory to make credit cards. The abstract class("Factory") defines how to create an credit card, but the actual credit card is created by the concrete class("CreditCardFactory").
+ */
 'use strict';
 
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
-
-import { CreditCardFactory } from './id-Card/credit-card-factory.mjs';
+import { CreditCardFactory } from './credit-card/credit-card-factory.mjs';
 
 const factory = new CreditCardFactory();
 

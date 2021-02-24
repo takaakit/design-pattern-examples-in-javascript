@@ -10,14 +10,31 @@ export class DirectoryElement extends FileSystemElement {
     
     // ˄
 
+    _name;
+
     elements;
 
     constructor(name) {
         // ˅
         super();
+        this._name = name;
         this.elements = new Array();
-        this.name = name;
-        this.size = 0;
+        // ˄
+    }
+
+    get name() {
+        // ˅
+        return this._name;
+        // ˄
+    }
+
+    get size() {
+        // ˅
+        let size = 0;
+        for (let i = 0; i < this.elements.length; i++) {
+            size += this.elements[i].size;
+        }
+        return size;
         // ˄
     }
 

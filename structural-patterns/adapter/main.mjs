@@ -1,15 +1,14 @@
 /*
-Display a character string as follows
-  -- Nice to meet you --
+Display the given string as follows
+```
+-- Nice to meet you --
+```
 or display it as follows.
-  [[ Nice to meet you ]]
-*/
+```
+[[ Nice to meet you ]]
+```
+ */
 'use strict';
-
-/////////////////////////////////////////////////
-// USAGE:  node main.mjs                       //
-// NOTE :  Use Node.js ver.12.17.0 or higher.  //
-/////////////////////////////////////////////////
 
 import { PrintMessageDisplay } from './print-message-display.mjs';
 

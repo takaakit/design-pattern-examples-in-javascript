@@ -8,11 +8,13 @@ export class Strategy {
     
     // ˄
 
-    nextHand() {
+    // Show a hand signal.
+    showHandSignal() {
         throw new Error('An abstract method has been executed.');
     }
 
-    learn(win) {
+    // Notify a game result.
+    notifyGameResult(result, ownHand, opponentsHand) {
         throw new Error('An abstract method has been executed.');
     }
 

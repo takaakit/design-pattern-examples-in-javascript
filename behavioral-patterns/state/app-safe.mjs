@@ -6,10 +6,18 @@ import { DaytimeState } from './daytime-state.mjs';
 
 // ˄
 
+// Safe security system that the security status changes with time.
 export class AppSafe extends Context {
     // ˅
     
     // ˄
+
+    hour;
+
+    timerId;
+
+    // Current state
+    state;
 
     textClock;
 
@@ -23,15 +31,10 @@ export class AppSafe extends Context {
 
     exitbutton;
 
-    hour;
-
-    // Current state
-    state;
-
     constructor() {
         // ˅
         super();
-        this.state = DaytimeState.getInstance();
+        this.state = new DaytimeState();
         this.hour = 0;
         this.textClock = document.getElementById('textTime');
         this.textMessage = document.getElementById('textMessage');
@@ -40,19 +43,19 @@ export class AppSafe extends Context {
         this.callbutton = document.getElementById('buttonPhone');
         this.exitbutton = document.getElementById('buttonExit');
 
-        this.safebutton.addEventListener('click', (e) => this.clickSafe());
-        this.soundbutton.addEventListener('click', (e) => this.clickSound());
-        this.callbutton.addEventListener('click', (e) => this.clickCall());
-        this.exitbutton.addEventListener('click', (e) => this.clickExit());
+        this.safebutton.addEventListener('click', () => this.useSafe());        // Use button pressed
+        this.soundbutton.addEventListener('click', () => this.soundBell());     // Alarm button pressed
+        this.callbutton.addEventListener('click', () => this.call());           // Phone button pressed
+        this.exitbutton.addEventListener('click', () => this.exit());           // Exit button pressed
 
-        setInterval(this.setTime.bind(this), 1000);     // Set the time
+        this.timerId = window.setInterval(this.setTime.bind(this), 1000);       // Set interval timer
         // ˄
     }
 
     // Set time
     setTime() {
         // ˅
-        var clockTime;
+        let clockTime;
         if (this.hour < 10) {
             clockTime = '0' + this.hour + ':00';
         }
@@ -74,7 +77,7 @@ export class AppSafe extends Context {
     // Change state
     changeState(state) {
         // ˅
-        console.log('The state changed from ' + this.state.toString() + ' to ' + state.toString());
+        console.log('The state changed from ' + this.state.toString() + ' to ' + state.toString() + '.');
         this.state = state;
         // ˄
     }
@@ -95,27 +98,28 @@ export class AppSafe extends Context {
         // ˄
     }
 
-    clickSafe() {
+    useSafe() {
         // ˅
-        this.state.soundBell(this);         // Safe use button pressed
+        this.state.useSafe(this);
         // ˄
     }
 
-    clickSound() {
+    soundBell() {
         // ˅
-        this.state.soundBell(this);         // Emergency bell button pressed
+        this.state.soundBell(this);
         // ˄
     }
 
-    clickCall() {
+    call() {
         // ˅
-        this.state.call(this);              // Normal call button pressed
+        this.state.call(this);
         // ˄
     }
 
-    clickExit() {
+    exit() {
         // ˅
-        document.body.innerHTML = "<h1>Dialog terminated.</h1>" // Exit button pressed
+        clearInterval(this.timerId);    // Clear interval timer
+        document.body.innerHTML = '<h1>Dialog terminated.</h1>';
         // ˄
     }
 

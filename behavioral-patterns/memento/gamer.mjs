@@ -11,50 +11,23 @@ export class Gamer {
     // ˄
 
     // Gamer's money
-    money;
-
-    // Acquired desserts 
-    desserts;
-
-    // Dessert name table
-    static dessertsName = ['Cake', 'Candy', 'Cookie'];
+    _money;
 
     constructor(money) {
         // ˅
-		this.desserts = new Array();
-		this.money = money;
+		this._money = money;
         // ˄
     }
 
-    // Get a dessert
-    get dessert() {
-        // ˅
-		var prefix = '';
-		if (Math.floor(Math.random() * 2) === 0) {
-			prefix = 'Delicious ';
-		}
-		return prefix + Gamer.dessertsName[Math.floor(Math.random() * Gamer.dessertsName.length)];
-        // ˄
-    }
-
-    // Get current status
     createMemento() {
         // ˅
-		const memento = new Memento(this.money);
-		for (let dessert of this.desserts) {
-			if (dessert.startsWith('Delicious ')) {		// Add a only delicious dessert
-				memento.addDessert(dessert);
-			}
-		}
-		return memento;
+		return new Memento(this._money);
         // ˄
     }
 
-    // Undo status
-    restoreMemento(memento) {
+    setMemento(memento) {
         // ˅
-		this.money = memento.money;
-		this.desserts = memento.desserts;
+        this._money = memento.money;
         // ˄
     }
 
@@ -62,30 +35,41 @@ export class Gamer {
     play() {
         // ˅
 		const dice = Math.floor(Math.random() * 6) + 1;		// Shake a dice
+        console.log('The number of dice is ' + dice + '.');
+
+        const preMoney = this._money;
 		switch (dice) {
-			case 1:		// In case of 1...Gamer's money increases
-				this.money = this.money + 100;
-				console.log('Gamer\'s money increases.');
+			case 1:
+            case 3:
+            case 5:
+                // In case of odd...Money is halved
+				this._money = this._money / 2;
+				console.log('Gamer\'s money is halved: ' + preMoney + ' -> ' + this._money);
 				break;
-			case 2:		// In case of 2...Gamer's money halves
-				this.money = this.money / 2;
-				console.log('Gamer\'s money halves.');
+            case 2:
+            case 4:
+            case 6:
+                // In case of even...Money doubles
+                this._money = this._money * 2;
+				console.log('Gamer\'s money doubles: ' + preMoney + ' -> ' + this._money);
 				break;
-			case 6:		// In case of 6...Gamer gets desserts
-				const gotDessert = this.dessert
-				console.log('Gamer gets desserts(' + gotDessert + ')');
-				this.desserts.push(gotDessert);
-				break;
-			default:	// Other...Nothing happens
-				console.log('Nothing happens.');
-				break;
+			default:
+                // Other...Exit
+				console.log('Unexpected value.');
+				process.exit(1);
 		}
+        // ˄
+    }
+
+    get money() {
+        // ˅
+        return this._money;
         // ˄
     }
 
     toString() {
         // ˅
-		return '[money = ' + this.money + ', desserts = ' + this.desserts.join(', ') + ']';
+		return '[money = ' + this._money + ']';
         // ˄
     }
 

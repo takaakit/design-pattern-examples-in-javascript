@@ -15,7 +15,6 @@ export class ColleagueButton extends Colleague {
     constructor(button) {
         // ˅
         super();
-        this.mediator = null;
         this.button = button;
         this.button.addEventListener('click', (event) => this.clickButton(event));
         // ˄
@@ -30,7 +29,7 @@ export class ColleagueButton extends Colleague {
 
     clickButton(event) {
         // ˅
-        this.mediator.colleagueChanged(event);
+        this._mediator.colleagueChanged(event);
         // ˄
     }
 

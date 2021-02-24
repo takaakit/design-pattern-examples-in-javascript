@@ -21,7 +21,6 @@ export class TextDisplayImpl extends DisplayImpl {
         super();
         this.text = text;
         this.width = text.length;   // Set the number of characters in bytes.
-        
         // ˄
     }
 
@@ -45,12 +44,11 @@ export class TextDisplayImpl extends DisplayImpl {
 
     printLine() {
         // ˅
-        var line = '*';                 // Display "*" mark at the beginning of a frame.
+        process.stdout.write('*');              // Display "*" mark at the beginning of a frame.
         for (let i = 0; i < this.width; i++) {  // Display "." for the number of "width".
-            line += '.'
+            process.stdout.write('.');
         }
-        line += '*'                             // Display "*" mark at the end of a frame.
-        console.log(line);
+        process.stdout.write('*\n');            // Display "*" mark at the end of a frame.
         // ˄
     }
 

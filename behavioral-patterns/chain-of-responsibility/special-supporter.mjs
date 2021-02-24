@@ -20,7 +20,7 @@ export class SpecialSupporter extends Supporter {
     }
 
     // Troubles with the specific ID are handled.
-    handle(trouble) {
+    canHandle(trouble) {
         // ˅
         return trouble.id === this.targetId;
         // ˄

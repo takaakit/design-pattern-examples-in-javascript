@@ -5,6 +5,10 @@ import fs from 'fs';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+// Get the absolute path of the currently executing file referring to the information below.
+// https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 // ˄
 
 export class LargeSizeChar {
@@ -17,13 +21,7 @@ export class LargeSizeChar {
 
     constructor(charName) {
         // ˅
-        this.displayData = null;
-        
         try {
-            // Get the absolute path of the currently executing file referring to the information below.
-            // https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag
-            const __dirname = dirname(fileURLToPath(import.meta.url));
-
             const buf = fs.readFileSync(__dirname + '/big' + charName + '.txt', 'utf8');
             this.displayData = buf.toString();
         }
