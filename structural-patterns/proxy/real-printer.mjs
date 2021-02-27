@@ -2,7 +2,6 @@
 'use strict';
 
 import { Printer } from './printer.mjs';
-import sleep from 'sleep';
 
 // ˄
 
@@ -41,8 +40,7 @@ export class RealPrinter extends Printer {
     heavyTask(message) {
         // ˅
         process.stdout.write(message);
-        for (let i = 0; i < 10; i++) {
-            sleep.msleep(500);   // Wait 500ms
+        for (let i = 0; i < 50; i++) {
             process.stdout.write('.');
         }
         console.log('Done.');

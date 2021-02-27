@@ -2,7 +2,6 @@
 'use strict';
 
 import { Observer } from './observer.mjs';
-import sleep from 'sleep';
 
 // ˄
 
@@ -19,8 +18,6 @@ export class BarChartObserver extends Observer {
 			barChart += '*';
 		}
 		console.log(barChart);
-
-        sleep.msleep(100);   // Wait 100ms
         // ˄
     }
 
