@@ -17,6 +17,6 @@ readline.question('', (data) => {
     const input = data;
     readline.close();
 
-    const bs = new LargeSizeString(input);
-    bs.display();
+    const lss = new LargeSizeString(input);
+    lss.display();
 });
