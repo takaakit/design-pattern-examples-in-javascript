@@ -10,10 +10,24 @@ export class LargeSizeCharFactory {
     
     // ˄
 
-    static poolChars = new Map();
+    poolChars;
+
+    static instance = new LargeSizeCharFactory();
+
+    static getInstance() {
+        // ˅
+        return this.instance;
+        // ˄
+    }
+
+    constructor() {
+        // ˅
+        this.poolChars = new Map()
+        // ˄
+    }
 
     // Create an instance of the large size character.
-    static getLargeSizeChar(charName) {
+    getLargeSizeChar(charName) {
         // ˅
         let lsc = this.poolChars.get(charName);
         if (lsc === undefined) {

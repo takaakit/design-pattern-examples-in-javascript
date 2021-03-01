@@ -15,13 +15,27 @@ export class PageCreator {
     
     // ˄
 
-    static createSimpleHomepage(mailAddress, htmlFileName) {
+    static instance = new PageCreator();
+
+    static getInstance() {
+        // ˅
+        return this.instance;
+        // ˄
+    }
+
+    constructor() {
+        // ˅
+        
+        // ˄
+    }
+
+    createSimpleHomepage(mailAddress, htmlFileName) {
         // ˅
         // Get the absolute path of the currently executing file referring to the information below.
         // https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag
         const __dirname = dirname(fileURLToPath(import.meta.url));
 
-        const addressBook = DataLibrary.getData(__dirname + '/addressbook.txt');
+        const addressBook = DataLibrary.getInstance().getData(__dirname + '/addressbook.txt');
         const userName = addressBook.get(mailAddress);
         
         const writer = new HtmlWriter(fs.createWriteStream(htmlFileName, 'utf8'));
