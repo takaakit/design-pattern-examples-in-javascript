@@ -55,6 +55,7 @@ export class DirectoryElement extends FileSystemElement {
         // ˄
     }
 
+    // Get the iterator
     iterator() {
         // ˅
         return this.elements[Symbol.iterator]();
