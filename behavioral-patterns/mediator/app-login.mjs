@@ -57,19 +57,18 @@ export class AppLogin extends Mediator {
     }
 
     // Change enable/disable of the Colleagues when notified from the Mediators.
-    colleagueChanged(event) {
+    colleagueChanged() {
         // ˅
-        if (event.currentTarget === document.getElementById('buttonOk')
-                || event.currentTarget === document.getElementById('buttonCancel')) {
+        if (this.buttonOk.isPressed() || this.buttonCancel.isPressed()) {
             document.body.innerHTML = '<h1>Dialog terminated.</h1>'     // Display a termination message
         }
         else {
-            if (event.currentTarget === document.getElementById('radioGuest')) { // Guest mode
+            if (this.radioGuest.isSelected()) {             // Guest mode
                 this.textUsername.setActivation(false);
                 this.textPassword.setActivation(false);
                 this.buttonOk.setActivation(true);
             }
-            else {                                                              // Login mode
+            else {                                          // Login mode
                 this.textUsername.setActivation(true);
                 this.textPassword.setActivation(true);
 

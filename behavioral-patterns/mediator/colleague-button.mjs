@@ -10,13 +10,17 @@ export class ColleagueButton extends Colleague {
     
     // ˄
 
+    _isPressed;
+
     button;
 
     constructor(button) {
         // ˅
         super();
         this.button = button;
-        this.button.addEventListener('click', (event) => this.clickButton(event));
+        this._isPressed = false;
+        this.button.addEventListener('mousedown', (event) => this.pressedButton(event));
+        this.button.addEventListener('mouseup', (event) => this.releasedButton(event));
         // ˄
     }
 
@@ -27,9 +31,22 @@ export class ColleagueButton extends Colleague {
         // ˄
     }
 
-    clickButton(event) {
+    isPressed() {
         // ˅
-        this._mediator.colleagueChanged(event);
+        return this._isPressed;
+        // ˄
+    }
+
+    pressedButton(event) {
+        // ˅
+        this._isPressed = true;
+        // ˄
+    }
+
+    releasedButton(event) {
+        // ˅
+        this._mediator.colleagueChanged();
+        this._isPressed = false;
         // ˄
     }
 

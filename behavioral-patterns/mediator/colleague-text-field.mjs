@@ -35,7 +35,7 @@ export class ColleagueTextField extends Colleague {
 
     inputTextArea(event) {
         // ˅
-        this._mediator.colleagueChanged(event);
+        this._mediator.colleagueChanged();
         // ˄
     }
 

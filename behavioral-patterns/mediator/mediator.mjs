@@ -12,7 +12,7 @@ export class Mediator {
         throw new Error('An abstract method has been executed.');
     }
 
-    colleagueChanged(event) {
+    colleagueChanged() {
         throw new Error('An abstract method has been executed.');
     }
 

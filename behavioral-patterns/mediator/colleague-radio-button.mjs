@@ -27,9 +27,15 @@ export class ColleagueRadioButton extends Colleague {
         // ˄
     }
 
+    isSelected() {
+        // ˅
+        return this.radioButton.checked;
+        // ˄
+    }
+
     clickRadioButton(event) {
         // ˅
-        this._mediator.colleagueChanged(event);
+        this._mediator.colleagueChanged();
         // ˄
     }
 
