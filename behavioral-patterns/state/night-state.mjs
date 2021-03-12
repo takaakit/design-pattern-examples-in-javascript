@@ -11,6 +11,14 @@ export class NightState extends State {
     
     // ˄
 
+    static instance = new NightState();
+
+    static getInstance() {
+        // ˅
+        return this.instance;
+        // ˄
+    }
+
     constructor() {
         // ˅
         super();
@@ -21,7 +29,7 @@ export class NightState extends State {
     setTime(context, hour) {
         // ˅
         if (9 <= hour && hour < 17) {
-            context.changeState(new DaytimeState());
+            context.changeState(DaytimeState.getInstance());
         }
         // ˄
     }

@@ -34,7 +34,7 @@ export class AppSafe extends Context {
     constructor() {
         // ˅
         super();
-        this.state = new DaytimeState();
+        this.state = DaytimeState.getInstance();
         this.hour = 0;
         this.textClock = document.getElementById('textTime');
         this.textMessage = document.getElementById('textMessage');
