@@ -5,7 +5,7 @@ import { Observer } from './observer.mjs';
 
 // ˄
 
-// Display number values with a bar chart.
+// Display values as a bar chart.
 export class BarChartObserver extends Observer {
     // ˅
     

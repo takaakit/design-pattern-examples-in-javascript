@@ -5,7 +5,7 @@ import { Observer } from './observer.mjs';
 
 // ˄
 
-// Display number values with digits.
+// Display values as a number.
 export class DigitObserver extends Observer {
     // ˅
     
