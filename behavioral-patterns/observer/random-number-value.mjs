@@ -29,12 +29,6 @@ export class RandomNumberValue extends NumberValue {
         // ˄
     }
 
-    get value() {
-        // ˅
-        return this._value;
-        // ˄
-    }
-
     // ˅
     
     // ˄
