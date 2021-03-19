@@ -16,7 +16,7 @@ export class RealPrinter extends Printer {
         // ˅
         super();
         this._printerName = name;
-        this.heavyTask('Creating an instance(' + name + ') of the Printer');
+        this.heavyTask('Creating an instance (' + name + ') of the Printer');
         // ˄
     }
 
