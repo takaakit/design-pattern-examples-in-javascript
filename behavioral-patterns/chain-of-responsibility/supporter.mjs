@@ -45,12 +45,6 @@ export class Supporter {
         // ˄
     }
 
-    toString() {
-        // ˅
-        return "[" + this.name + "]";
-        // ˄
-    }
-
     canHandle(trouble) {
         throw new Error('An abstract method has been executed.');
     }
@@ -58,7 +52,7 @@ export class Supporter {
     // Trouble was supported.
     supported(trouble) {
         // ˅
-        console.log(trouble.toString() + " was handled by " + this.toString() + ".");
+        console.log(trouble.toString() + " was handled by " + this.name + ".");
         // ˄
     }
 

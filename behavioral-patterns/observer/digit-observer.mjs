@@ -11,9 +11,20 @@ export class DigitObserver extends Observer {
     
     // ˄
 
-    update(numberValue) {
+    numberSubject;
+
+    constructor(numberSubject) {
         // ˅
-		console.log('Digit    : ' + numberValue.value);
+        super();
+        this.numberSubject = numberSubject;
+        // ˄
+    }
+
+    update(changedSubject) {
+        // ˅
+        if (changedSubject === this.numberSubject) {
+            console.log('Digit    : ' + this.numberSubject.value);
+        }
         // ˄
     }
 

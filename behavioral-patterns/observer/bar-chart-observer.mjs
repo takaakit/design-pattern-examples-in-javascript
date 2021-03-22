@@ -11,13 +11,24 @@ export class BarChartObserver extends Observer {
     
     // ˄
 
-    update(numberValue) {
+    numberSubject;
+
+    constructor(numberSubject) {
         // ˅
-		let barChart = 'Bar chart: ';
-		for (let i = 0; i < numberValue.value; i++) {
-			barChart += '*';
-		}
-		console.log(barChart);
+        super();
+        this.numberSubject = numberSubject;
+        // ˄
+    }
+
+    update(changedSubject) {
+        // ˅
+        if (changedSubject === this.numberSubject) {
+            let barChart = 'Bar chart: ';
+            for (let i = 0; i < this.numberSubject.value; i++) {
+                barChart += '*';
+            }
+            console.log(barChart);
+        }
         // ˄
     }
 
