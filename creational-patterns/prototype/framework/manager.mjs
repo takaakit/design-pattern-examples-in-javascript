@@ -25,7 +25,7 @@ export class Manager {
     getDisplay(displayName) {
         // ˅
         const d = this.display.get(displayName);
-        return d.createClone();
+        return d.clone();
         // ˄
     }
 

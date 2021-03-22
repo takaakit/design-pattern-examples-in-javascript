@@ -8,7 +8,7 @@ export class Display {
     
     // ˄
 
-    createClone() {
+    clone() {
         throw new Error('An abstract method has been executed.');
     }
 

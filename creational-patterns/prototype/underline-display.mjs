@@ -19,7 +19,7 @@ export class UnderlineDisplay extends Display {
         // ˄
     }
 
-    createClone() {
+    clone() {
         // ˅
         return new UnderlineDisplay(this.underlineChar);
         // ˄

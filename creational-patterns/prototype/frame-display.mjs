@@ -19,7 +19,7 @@ export class FrameDisplay extends Display {
         // ˄
     }
 
-    createClone() {
+    clone() {
         // ˅
         return new FrameDisplay(this.borderChar);
         // ˄
