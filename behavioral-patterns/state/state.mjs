@@ -8,23 +8,23 @@ export class State {
     
     // ˄
 
-    // Set time
     setTime(context, hour) {
         throw new Error('An abstract method has been executed.');
     }
 
-    // Use a safe
-    useSafe(context) {
+    use(context) {
         throw new Error('An abstract method has been executed.');
     }
 
-    // Sound a emergency bell
-    soundBell(context) {
+    alarm(context) {
         throw new Error('An abstract method has been executed.');
     }
 
-    // Make a normal call
-    call(context) {
+    phone(context) {
+        throw new Error('An abstract method has been executed.');
+    }
+
+    toString() {
         throw new Error('An abstract method has been executed.');
     }
 

@@ -13,6 +13,10 @@ export class Node {
         throw new Error('An abstract method has been executed.');
     }
 
+    toString() {
+        throw new Error('An abstract method has been executed.');
+    }
+
     // ˅
     
     // ˄

@@ -25,7 +25,6 @@ export class NightState extends State {
         // ˄
     }
 
-    // Set time
     setTime(context, hour) {
         // ˅
         if (9 <= hour && hour < 17) {
@@ -34,22 +33,19 @@ export class NightState extends State {
         // ˄
     }
 
-    // Use a safe
-    useSafe(context) {
+    use(context) {
         // ˅
         context.callSecurityGuardsRoom('Emergency: Use a safe at night!');
         // ˄
     }
 
-    // Sound a emergency bell
-    soundBell(context) {
+    alarm(context) {
         // ˅
         context.callSecurityGuardsRoom('Sound a emergency bell at night');
         // ˄
     }
 
-    // Make a normal call
-    call(context) {
+    phone(context) {
         // ˅
         context.recordSecurityLog('Record a night call');
         // ˄

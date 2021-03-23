@@ -25,7 +25,6 @@ export class DaytimeState extends State {
         // ˄
     }
 
-    // Set time
     setTime(context, hour) {
         // ˅
         if (hour < 9 || 17 <= hour) {
@@ -34,22 +33,19 @@ export class DaytimeState extends State {
         // ˄
     }
 
-    // Use a safe
-    useSafe(context) {
+    use(context) {
         // ˅
         context.recordSecurityLog('Use a safe in the daytime');
         // ˄
     }
 
-    // Sound a emergency bell
-    soundBell(context) {
+    alarm(context) {
         // ˅
         context.callSecurityGuardsRoom('Sound a emergency bell in the daytime');
         // ˄
     }
 
-    // Make a normal call
-    call(context) {
+    phone(context) {
         // ˅
         context.callSecurityGuardsRoom('Make a normal call in the daytime');
         // ˄

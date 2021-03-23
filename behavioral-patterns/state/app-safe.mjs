@@ -23,13 +23,11 @@ export class AppSafe extends Context {
 
     textMessage;
 
-    safebutton;
+    useButton;
 
-    soundbutton;
+    alarmButton;
 
-    callbutton;
-
-    exitbutton;
+    phoneButton;
 
     constructor() {
         // ˅
@@ -41,12 +39,10 @@ export class AppSafe extends Context {
         this.safebutton = document.getElementById('buttonUse');
         this.soundbutton = document.getElementById('buttonAlarm');
         this.callbutton = document.getElementById('buttonPhone');
-        this.exitbutton = document.getElementById('buttonExit');
 
-        this.safebutton.addEventListener('click', () => this.useSafe());        // Use button pressed
-        this.soundbutton.addEventListener('click', () => this.soundBell());     // Alarm button pressed
-        this.callbutton.addEventListener('click', () => this.call());           // Phone button pressed
-        this.exitbutton.addEventListener('click', () => this.exit());           // Exit button pressed
+        this.safebutton.addEventListener('click', () => this.pressedUseButton());
+        this.soundbutton.addEventListener('click', () => this.pressedAlarmButton());
+        this.callbutton.addEventListener('click', () => this.pressedPhoneButton());
 
         this.timerId = window.setInterval(this.setTime.bind(this), 1000);       // Set interval timer
         // ˄
@@ -98,28 +94,21 @@ export class AppSafe extends Context {
         // ˄
     }
 
-    useSafe() {
+    pressedUseButton() {
         // ˅
-        this.state.useSafe(this);
+        this.state.use(this);
         // ˄
     }
 
-    soundBell() {
+    pressedAlarmButton() {
         // ˅
-        this.state.soundBell(this);
+        this.state.alarm(this);
         // ˄
     }
 
-    call() {
+    pressedPhoneButton() {
         // ˅
-        this.state.call(this);
-        // ˄
-    }
-
-    exit() {
-        // ˅
-        clearInterval(this.timerId);    // Clear interval timer
-        document.body.innerHTML = '<h1>Dialog terminated.</h1>';
+        this.state.phone(this);
         // ˄
     }
 
