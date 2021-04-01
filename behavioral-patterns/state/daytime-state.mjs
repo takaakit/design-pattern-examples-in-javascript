@@ -41,7 +41,7 @@ export class DaytimeState extends State {
 
     alarm(context) {
         // ˅
-        context.callSecurityGuardsRoom('Sound a emergency bell in the daytime');
+        context.callSecurityGuardsRoom('Sound an emergency bell in the daytime');
         // ˄
     }
 
