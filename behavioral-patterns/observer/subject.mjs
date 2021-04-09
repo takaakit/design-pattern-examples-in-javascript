@@ -3,7 +3,7 @@
 
 // ˄
 
-// An abstract class that generates number value.
+// Provides an interface for attaching and detaching Observer objects.
 export class Subject {
     // ˅
     
