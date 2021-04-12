@@ -10,7 +10,13 @@ export class Factory {
 
     create(owner) {
         // ˅
-        return this.createProduct(owner);
+        // Write pre-creation code here, if any.
+
+        let product = this.createProduct(owner);
+
+        // Write post-creation code here, if any.
+
+        return product;
         // ˄
     }
 
