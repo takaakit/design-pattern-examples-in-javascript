@@ -1,5 +1,5 @@
 /*
-Observers observe objects generating a numerical value and display the value.
+Observers observe a Subject object holding a numerical value and display the value.
 The display formats are digits and bar charts.
  */
 'use strict';
