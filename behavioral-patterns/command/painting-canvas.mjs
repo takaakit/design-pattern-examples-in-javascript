@@ -32,10 +32,10 @@ export class PaintingCanvas extends PaintingTarget {
         // ˄
     }
 
-    paint(paintingPosX, paintingPosY) {
+    paint(x, y) {
         // ˅
         this.context.beginPath();
-        this.context.arc(paintingPosX, paintingPosY, this.POINT_RADIUS, 0, Math.PI*2, false);
+        this.context.arc(x, y, this.POINT_RADIUS, 0, Math.PI*2, false);
         this.context.fillStyle = this.COLOR;
         this.context.fill();
         // ˄
