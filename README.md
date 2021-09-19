@@ -17,7 +17,7 @@ This project is available for the following objectives:
 <a id="code-example"></a>
 > JavaScript code example:
 
-```javascript:FileElement class
+```javascript
 // ˅
 'use strict';
 
