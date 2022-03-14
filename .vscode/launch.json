@@ -6,6 +6,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/chain-of-responsibility",
             "program": "${workspaceFolder}/behavioral-patterns/chain-of-responsibility/main.mjs",
+            "cwd": "${workspaceFolder}/behavioral-patterns/chain-of-responsibility",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -28,6 +29,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/interpreter",
             "program": "${workspaceFolder}/behavioral-patterns/interpreter/main.mjs",
+            "cwd": "${workspaceFolder}/behavioral-patterns/interpreter",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -39,6 +41,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/iterator",
             "program": "${workspaceFolder}/behavioral-patterns/iterator/main.mjs",
+            "cwd": "${workspaceFolder}/behavioral-patterns/iterator",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -61,6 +64,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/memento",
             "program": "${workspaceFolder}/behavioral-patterns/memento/main.mjs",
+            "cwd": "${workspaceFolder}/behavioral-patterns/memento",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -72,6 +76,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/observer",
             "program": "${workspaceFolder}/behavioral-patterns/observer/main.mjs",
+            "cwd": "${workspaceFolder}/behavioral-patterns/observer",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -94,6 +99,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/strategy",
             "program": "${workspaceFolder}/behavioral-patterns/strategy/main.mjs",
+            "cwd": "${workspaceFolder}/behavioral-patterns/strategy",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -105,6 +111,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/template-method",
             "program": "${workspaceFolder}/behavioral-patterns/template-method/main.mjs",
+            "cwd": "${workspaceFolder}/behavioral-patterns/template-method",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -116,6 +123,7 @@
             "request": "launch",
             "name": "Launch behavioral-patterns/visitor",
             "program": "${workspaceFolder}/behavioral-patterns/visitor/main.mjs",
+            "cwd": "${workspaceFolder}/behavioral-patterns/visitor",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -127,6 +135,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/abstract-factory",
             "program": "${workspaceFolder}/creational-patterns/abstract-factory/main.mjs",
+            "cwd": "${workspaceFolder}/creational-patterns/abstract-factory",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -138,6 +147,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/builder",
             "program": "${workspaceFolder}/creational-patterns/builder/main.mjs",
+            "cwd": "${workspaceFolder}/creational-patterns/builder",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -149,6 +159,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/factory-method",
             "program": "${workspaceFolder}/creational-patterns/factory-method/main.mjs",
+            "cwd": "${workspaceFolder}/creational-patterns/factory-method",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -160,6 +171,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/prototype",
             "program": "${workspaceFolder}/creational-patterns/prototype/main.mjs",
+            "cwd": "${workspaceFolder}/creational-patterns/prototype",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -171,6 +183,7 @@
             "request": "launch",
             "name": "Launch creational-patterns/singleton",
             "program": "${workspaceFolder}/creational-patterns/singleton/main.mjs",
+            "cwd": "${workspaceFolder}/creational-patterns/singleton",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -182,6 +195,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/adapter",
             "program": "${workspaceFolder}/structural-patterns/adapter/main.mjs",
+            "cwd": "${workspaceFolder}/structural-patterns/adapter",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -193,6 +207,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/bridge",
             "program": "${workspaceFolder}/structural-patterns/bridge/main.mjs",
+            "cwd": "${workspaceFolder}/structural-patterns/bridge",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -204,6 +219,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/composite",
             "program": "${workspaceFolder}/structural-patterns/composite/main.mjs",
+            "cwd": "${workspaceFolder}/structural-patterns/composite",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -215,6 +231,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/decorator",
             "program": "${workspaceFolder}/structural-patterns/decorator/main.mjs",
+            "cwd": "${workspaceFolder}/structural-patterns/decorator",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -226,6 +243,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/facade",
             "program": "${workspaceFolder}/structural-patterns/facade/main.mjs",
+            "cwd": "${workspaceFolder}/structural-patterns/facade",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -237,6 +255,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/flyweight",
             "program": "${workspaceFolder}/structural-patterns/flyweight/main.mjs",
+            "cwd": "${workspaceFolder}/structural-patterns/flyweight",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",
@@ -248,6 +267,7 @@
             "request": "launch",
             "name": "Launch structural-patterns/proxy",
             "program": "${workspaceFolder}/structural-patterns/proxy/main.mjs",
+            "cwd": "${workspaceFolder}/structural-patterns/proxy",
             "console": "integratedTerminal",
             "skipFiles": [
                 "${workspaceFolder}/node_modules/**/*.js",

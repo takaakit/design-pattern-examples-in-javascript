@@ -36,14 +36,8 @@ import { Program } from './program.mjs';
 import { Context } from './context.mjs';
 import fs from 'fs';
 import readline from 'readline';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
 
-// Get the absolute path of the currently executing file referring to the information below.
-// https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-when-using-the-experimental-modules-flag
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-const stream = fs.createReadStream(__dirname + '/program.txt', 'utf8');
+const stream = fs.createReadStream(process.cwd() + '/program.txt', 'utf8');
 const reader = readline.createInterface({ input: stream });
 reader.on('line', (line) => {
 	console.log('Before parsing : ' + line);
