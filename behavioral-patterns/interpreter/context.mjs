@@ -9,21 +9,21 @@ export class Context {
     
     // ˄
 
-    nodes;
+    tokens;
 
-    currentNumber;
+    currentIndex;
 
     constructor(text) {
         // ˅
-		this.nodes = text.split(/\s+/);
-		this.currentNumber = 0;
+		this.tokens = text.split(/\s+/);
+		this.currentIndex = 0;
         // ˄
     }
 
     nextToken() {
         // ˅
-		if (this.currentNumber < this.nodes.length) {
-			return this.nodes[this.currentNumber++];
+		if (this.currentIndex < this.tokens.length) {
+			return this.tokens[this.currentIndex++];
 		}
 		else {
 			return null;
@@ -33,14 +33,14 @@ export class Context {
 
     getToken() {
         // ˅
-		return this.nodes[this.currentNumber];
+		return this.tokens[this.currentIndex];
         // ˄
     }
 
     slideToken(token) {
         // ˅
-		if (token !== this.nodes[this.currentNumber]) {
-			throw new Error('WARNING: ' + token + ' is expected but ' + this.nodes[this.currentNumber] + ' was found.');
+		if (token !== this.tokens[this.currentIndex]) {
+			throw new Error('WARNING: ' + token + ' is expected but ' + this.tokens[this.currentIndex] + ' was found.');
 		}
 		this.nextToken();
         // ˄
