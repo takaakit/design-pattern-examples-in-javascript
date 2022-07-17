@@ -21,6 +21,7 @@ export class HistoryCommand extends Command {
         // ˄
     }
 
+    // Execute all past commands
     execute() {
         // ˅
         for (let command of this.pastCommands) {
