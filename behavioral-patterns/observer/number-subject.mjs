@@ -27,6 +27,7 @@ export class NumberSubject extends Subject {
 
     set value(value) {
         // ˅
+        // Notify observers when the value is set.
         this._value = value;
         this.notifyObservers();
         // ˄
