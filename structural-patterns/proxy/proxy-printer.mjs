@@ -6,6 +6,7 @@ import { RealPrinter } from './real-printer.mjs';
 
 // ˄
 
+// ProxyPrinter forwards requests to RealPrinter when appropriate.
 export class ProxyPrinter extends Printer {
     // ˅
     
@@ -40,15 +41,18 @@ export class ProxyPrinter extends Printer {
         if (this.real != null) {
             this.real.changeName(name);
         }
+        
         this.currentName = name;
         // ˄
     }
 
     output(content) {
         // ˅
+        // Check to see if the the RealPrinter had been created, create it if necessary.
         if (this.real == null) {
             this.real = new RealPrinter(this.currentName);
         }
+        
         this.real.output(content);
         // ˄
     }
