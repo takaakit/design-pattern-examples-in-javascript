@@ -26,19 +26,19 @@ export class Subject {
 
     detach(observer) {
         // ˅
-		for (let i = 0; i < this.observers.length; i++) {
-			if(this.observers[i] === observer){
-				this.observers.splice(i, 1);
-			}
-		}
+        for (let i = 0; i < this.observers.length; i++) {
+            if(this.observers[i] === observer){
+                this.observers.splice(i, 1);
+            }
+        }
         // ˄
     }
 
     notifyObservers() {
         // ˅
-		for (let observer of this.observers) {
-			observer.update(this);
-		}
+        for (let observer of this.observers) {
+            observer.update(this);
+        }
         // ˄
     }
 

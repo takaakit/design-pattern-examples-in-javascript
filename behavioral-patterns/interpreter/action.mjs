@@ -21,10 +21,10 @@ export class Action extends Node {
 
     parse(context) {
         // ˅
-		const currentToken = context.getToken();
-		if (currentToken !== 'forward' && currentToken !== 'right' && currentToken !== 'left') {
-			throw new Error(currentToken + ' is unknown');
-		}
+        const currentToken = context.getToken();
+        if (currentToken !== 'forward' && currentToken !== 'right' && currentToken !== 'left') {
+            throw new Error(currentToken + ' is unknown');
+        }
 
         this.name = currentToken;
 
@@ -34,7 +34,7 @@ export class Action extends Node {
 
     toString() {
         // ˅
-		return this.name;
+        return this.name;
         // ˄
     }
 

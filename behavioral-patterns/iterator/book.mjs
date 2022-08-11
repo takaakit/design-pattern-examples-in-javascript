@@ -12,7 +12,7 @@ export class Book {
 
     constructor(title) {
         // ˅
-		this.title = title;
+        this.title = title;
         // ˄
     }
 

@@ -18,27 +18,27 @@ export class BookShelf extends Aggregate {
     constructor(maxsize) {
         // ˅
         super();
-		this.books = new Array(maxsize);
-		this._numberOfBooks = 0;
+        this.books = new Array(maxsize);
+        this._numberOfBooks = 0;
         // ˄
     }
 
     iterator() {
         // ˅
-		return new BookShelfIterator(this);
+        return new BookShelfIterator(this);
         // ˄
     }
 
     getAt(index) {
         // ˅
-		return this.books[index];
+        return this.books[index];
         // ˄
     }
 
     add(book) {
         // ˅
-		this.books[this._numberOfBooks] = book;
-		this._numberOfBooks++;
+        this.books[this._numberOfBooks] = book;
+        this._numberOfBooks++;
         // ˄
     }
 

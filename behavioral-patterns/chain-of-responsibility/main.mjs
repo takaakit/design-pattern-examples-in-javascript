@@ -24,5 +24,5 @@ emily.setNext(william).setNext(amelia).setNext(joseph);
 
 // Various troubles occurred.
 for (let i = 0; i < 10; i++) {
-	emily.support(new Trouble(i));
+    emily.support(new Trouble(i));
 }
