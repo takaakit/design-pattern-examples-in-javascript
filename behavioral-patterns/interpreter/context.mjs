@@ -39,8 +39,8 @@ export class Context {
 
     slideToken(token) {
         // ˅
-		if (token !== this.tokens[this.currentIndex]) {
-			throw new Error('WARNING: ' + token + ' is expected but ' + this.tokens[this.currentIndex] + ' was found.');
+		if (token !== this.getToken()) {
+			throw new Error('WARNING: ' + token + ' is expected but ' + this.getToken() + ' was found.');
 		}
 		this.nextToken();
         // ˄
