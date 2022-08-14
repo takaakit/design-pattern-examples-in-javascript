@@ -22,7 +22,7 @@ export class Factory {
     }
 
     createProduct(owner) {
-        throw new Error(`An abstract method has been executed.`);
+        throw new Error('An abstract method has been executed.');
     }
 
     // ˅

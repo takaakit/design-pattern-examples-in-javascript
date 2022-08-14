@@ -9,11 +9,11 @@ export class Display {
     // ˄
 
     clone() {
-        throw new Error(`An abstract method has been executed.`);
+        throw new Error('An abstract method has been executed.');
     }
 
     show(message) {
-        throw new Error(`An abstract method has been executed.`);
+        throw new Error('An abstract method has been executed.');
     }
 
     // ˅

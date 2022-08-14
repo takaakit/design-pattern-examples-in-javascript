@@ -10,16 +10,16 @@ export class Display {
 
     // Column width
     get columns() {
-        throw new Error(`An abstract method has been executed.`);
+        throw new Error('An abstract method has been executed.');
     }
 
     // Number of rows
     get rows() {
-        throw new Error(`An abstract method has been executed.`);
+        throw new Error('An abstract method has been executed.');
     }
 
     getLineText(row) {
-        throw new Error(`An abstract method has been executed.`);
+        throw new Error('An abstract method has been executed.');
     }
 
     // Show all

@@ -18,7 +18,7 @@ export class Colleague {
 
     // Set enable/disable from the Mediator
     setActivation(isEnable) {
-        throw new Error(`An abstract method has been executed.`);
+        throw new Error('An abstract method has been executed.');
     }
 
     set mediator(mediator) {
