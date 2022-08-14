@@ -19,12 +19,12 @@ export class ListData extends Data {
     toHTML() {
         // ˅
         const htmlData = new Array();
-        htmlData.push('<li>' + this.name + '<ul>');
+        htmlData.push(`<li>${this.name}<ul>`);
         for (let item of this.items) {
             htmlData.push(item.toHTML());
         }
-        htmlData.push('</ul></li>\n');
-        return htmlData.join('');
+        htmlData.push(`</ul></li>\n`);
+        return htmlData.join(``);
         // ˄
     }
 

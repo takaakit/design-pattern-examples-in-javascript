@@ -35,25 +35,25 @@ export class NightState extends State {
 
     use(context) {
         // ˅
-        context.callSecurityGuardsRoom('Emergency: Use a safe at night!');
+        context.callSecurityGuardsRoom(`Emergency: Use a safe at night!`);
         // ˄
     }
 
     alarm(context) {
         // ˅
-        context.callSecurityGuardsRoom('Sound an emergency bell at night');
+        context.callSecurityGuardsRoom(`Sound an emergency bell at night`);
         // ˄
     }
 
     phone(context) {
         // ˅
-        context.recordSecurityLog('Record a night call');
+        context.recordSecurityLog(`Record a night call`);
         // ˄
     }
 
     toString() {
         // ˅
-        return '[Night]';
+        return `[Night]`;
         // ˄
     }
 

@@ -27,16 +27,9 @@ export class FrameDisplay extends Display {
 
     show(message) {
         // ˅
-        const length = message.length;
-        for (let i = 0; i < length + 4; i++) {
-            process.stdout.write(this.borderChar);
-        }
-        console.log();
-        console.log(this.borderChar + ' ' + message + ' ' + this.borderChar);
-        for (let i = 0; i < length + 4; i++) {
-            process.stdout.write(this.borderChar);
-        }
-        console.log();
+        console.log(this.borderChar.repeat(message.length + 4));
+        console.log(`${this.borderChar} ${message} ${this.borderChar}`);
+        console.log(this.borderChar.repeat(message.length + 4));
         // ˄
     }
 

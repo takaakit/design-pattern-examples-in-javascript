@@ -18,13 +18,13 @@ export class MessageDisplay {
 
     displayWithHyphens() {
         // ˅
-        console.log('-- ' + this.message + ' --');
+        console.log(`-- ${this.message} --`);
         // ˄
     }
 
     displayWithBrackets() {
         // ˅
-        console.log('[[ ' + this.message + ' ]]');
+        console.log(`[[ ${this.message} ]]`);
         // ˄
     }
 

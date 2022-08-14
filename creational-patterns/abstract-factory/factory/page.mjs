@@ -26,7 +26,7 @@ export class Page {
     }
 
     toHTML() {
-        throw new Error('An abstract method has been executed.');
+        throw new Error(`An abstract method has been executed.`);
     }
 
     add(item) {
@@ -37,14 +37,14 @@ export class Page {
 
     output() {
         // ˅
-        const fileName = this.title + '.html';
+        const fileName = `${this.title}.html`;
         try {
             fs.writeFileSync(fileName, this.toHTML());
         } catch(e) {
             console.error(e);
         }
-        console.log(fileName + ' has been created.');
-        console.log('Output File: ' + path.join(process.cwd(), fileName));
+        console.log(`${fileName} has been created.`);
+        console.log(`Output File: ${path.join(process.cwd(), fileName)}`);
         // ˄
     }
 

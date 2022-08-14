@@ -41,18 +41,18 @@ export class AppLogin extends Mediator {
         this.buttonCancel.mediator = this;
 
         // Generate a click event of the Guest radio button.
-        (document.getElementById('radioGuest')).click();
+        (document.getElementById(`radioGuest`)).click();
         // ˄
     }
 
     createColleagues() {
         // ˅
-        this.radioGuest = new ColleagueRadioButton(document.getElementById('radioGuest'));
-        this.radioLogin = new ColleagueRadioButton(document.getElementById('radioLogin'));
-        this.textUsername = new ColleagueTextField(document.getElementById('textUsername'));
-        this.textPassword = new ColleagueTextField(document.getElementById('textPassword'));
-        this.buttonOk = new ColleagueButton(document.getElementById('buttonOk'));
-        this.buttonCancel = new ColleagueButton(document.getElementById('buttonCancel'));
+        this.radioGuest = new ColleagueRadioButton(document.getElementById(`radioGuest`));
+        this.radioLogin = new ColleagueRadioButton(document.getElementById(`radioLogin`));
+        this.textUsername = new ColleagueTextField(document.getElementById(`textUsername`));
+        this.textPassword = new ColleagueTextField(document.getElementById(`textPassword`));
+        this.buttonOk = new ColleagueButton(document.getElementById(`buttonOk`));
+        this.buttonCancel = new ColleagueButton(document.getElementById(`buttonCancel`));
         // ˄
     }
 
@@ -60,15 +60,15 @@ export class AppLogin extends Mediator {
     colleagueChanged() {
         // ˅
         if (this.buttonOk.isPressed() || this.buttonCancel.isPressed()) {
-            document.body.innerHTML = '<h1>Dialog terminated.</h1>'     // Display a termination message
+            document.body.innerHTML = `<h1>Dialog terminated.</h1>`     // Display a termination message
         }
         else {
-            if (this.radioGuest.isSelected()) {             // Guest mode
+            if (this.radioGuest.isSelected()) {         // Guest mode
                 this.textUsername.setActivation(false);
                 this.textPassword.setActivation(false);
                 this.buttonOk.setActivation(true);
             }
-            else {                                          // Login mode
+            else {                                      // Login mode
                 this.textUsername.setActivation(true);
                 this.textPassword.setActivation(true);
 

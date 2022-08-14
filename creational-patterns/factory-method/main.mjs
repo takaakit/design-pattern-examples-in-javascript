@@ -9,11 +9,11 @@ import { CreditCardFactory } from './credit-card/credit-card-factory.mjs';
 
 const factory = new CreditCardFactory();
 
-const jacksonCard = factory.create('Jackson');
+const jacksonCard = factory.create(`Jackson`);
 jacksonCard.use();
 
-const sophiaCard = factory.create('Sophia');
+const sophiaCard = factory.create(`Sophia`);
 sophiaCard.use();
 
-const oliviaCard = factory.create('Olivia');
+const oliviaCard = factory.create(`Olivia`);
 oliviaCard.use();

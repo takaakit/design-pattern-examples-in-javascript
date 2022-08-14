@@ -17,6 +17,7 @@ export class DigitObserver extends Observer {
         // ˅
         super();
         this.numberSubject = numberSubject;
+        
         // ˄
     }
 
@@ -24,7 +25,7 @@ export class DigitObserver extends Observer {
         // ˅
         // Before processing, it checks to make sure the changed subject is the subject held.
         if (changedSubject === this.numberSubject) {
-            console.log('Digit    : ' + this.numberSubject.value);
+            console.log(`Digit    : ${this.numberSubject.value}`);
         }
         // ˄
     }

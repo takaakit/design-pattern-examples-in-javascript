@@ -60,7 +60,7 @@ export class Player {
 
     toString() {
         // ˅
-        return this.name + ' [' + this.gameCount + ' games, ' + this.winCount + ' won, ' + this.lossCount + ' lost, ' + (this.gameCount - this.winCount - this.lossCount) + ' drew]';
+        return `${this.name} [${this.gameCount} games, ${this.winCount} won, ${this.lossCount} lost, ${this.gameCount - this.winCount - this.lossCount} drew]`;
         // ˄
     }
 

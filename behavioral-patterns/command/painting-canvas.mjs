@@ -24,7 +24,7 @@ export class PaintingCanvas extends PaintingTarget {
     constructor(context, width, height) {
         // ˅
         super();
-        this.COLOR = 'lightgreen';
+        this.COLOR = `lightgreen`;
         this.POINT_RADIUS = 10;
         this.context = context;
         this.width = width;

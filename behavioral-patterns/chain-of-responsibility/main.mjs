@@ -14,10 +14,10 @@ import { SpecialSupporter } from './special-supporter.mjs';
 import { LimitedSupporter } from './limited-supporter.mjs';
 import { Trouble } from './trouble.mjs';
 
-const emily = new LazySupporter('Emily');
-const william = new MoodySupporter('William');
-const amelia = new SpecialSupporter('Amelia', 6);
-const joseph = new LimitedSupporter('Joseph', 5);
+const emily = new LazySupporter(`Emily`);
+const william = new MoodySupporter(`William`);
+const amelia = new SpecialSupporter(`Amelia`, 6);
+const joseph = new LimitedSupporter(`Joseph`, 5);
 
 // Make a chain.
 emily.setNext(william).setNext(amelia).setNext(joseph);

@@ -16,6 +16,7 @@ export class NumberSubject extends Subject {
     constructor() {
         // ˅
         super();
+        this._value = 0;
         // ˄
     }
 

@@ -34,15 +34,15 @@ export class AppSafe extends Context {
         super();
         this.state = DaytimeState.getInstance();
         this.hour = 0;
-        this.textClock = document.getElementById('textTime');
-        this.textMessage = document.getElementById('textMessage');
-        this.safebutton = document.getElementById('buttonUse');
-        this.soundbutton = document.getElementById('buttonAlarm');
-        this.callbutton = document.getElementById('buttonPhone');
+        this.textClock = document.getElementById(`textTime`);
+        this.textMessage = document.getElementById(`textMessage`);
+        this.useButton = document.getElementById(`buttonUse`);
+        this.alarmButton = document.getElementById(`buttonAlarm`);
+        this.phoneButton = document.getElementById(`buttonPhone`);
 
-        this.safebutton.addEventListener('click', () => this.pressedUseButton());
-        this.soundbutton.addEventListener('click', () => this.pressedAlarmButton());
-        this.callbutton.addEventListener('click', () => this.pressedPhoneButton());
+        this.useButton.addEventListener(`click`, () => this.pressedUseButton());
+        this.alarmButton.addEventListener(`click`, () => this.pressedAlarmButton());
+        this.phoneButton.addEventListener(`click`, () => this.pressedPhoneButton());
 
         this.timerId = window.setInterval(this.setTime.bind(this), 1000);       // Set interval timer
         // ˄
@@ -53,10 +53,10 @@ export class AppSafe extends Context {
         // ˅
         let clockTime;
         if (this.hour < 10) {
-            clockTime = '0' + this.hour + ':00';
+            clockTime = `0${this.hour}:00`;
         }
         else {
-            clockTime = this.hour + ':00';
+            clockTime = `${this.hour}:00`;
         }
 
         console.log(clockTime);
@@ -73,7 +73,7 @@ export class AppSafe extends Context {
     // Change state
     changeState(state) {
         // ˅
-        console.log('The state changed from ' + this.state.toString() + ' to ' + state.toString() + '.');
+        console.log(`The state changed from ${this.state.toString()} to ${state.toString()}.`);
         this.state = state;
         // ˄
     }
@@ -81,7 +81,7 @@ export class AppSafe extends Context {
     // Call a security guard room
     callSecurityGuardsRoom(message) {
         // ˅
-        this.textMessage.value += 'call! ' + message + '\n';
+        this.textMessage.value += `call! ${message}\n`;
         this.textMessage.scrollTop = this.textMessage.scrollHeight;     // Scroll to the bottom
         // ˄
     }
@@ -89,7 +89,7 @@ export class AppSafe extends Context {
     // Record security log
     recordSecurityLog(message) {
         // ˅
-        this.textMessage.value += 'record ... ' + message + '\n';
+        this.textMessage.value += `record ... ${message}\n`;
         this.textMessage.scrollTop = this.textMessage.scrollHeight;     // Scroll to the bottom
         // ˄
     }

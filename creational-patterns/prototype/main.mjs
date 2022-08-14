@@ -13,17 +13,17 @@ import { FrameDisplay } from './frame-display.mjs';
 const manager = new Manager();
 
 // Register instances of the "Display" subclass
-const emphasisUnderline = new UnderlineDisplay('~');
-manager.registerDisplay('emphasis', emphasisUnderline);
-const highlightFrame = new FrameDisplay('+');
-manager.registerDisplay('highlight', highlightFrame);
-const warningFrame = new FrameDisplay('#');
-manager.registerDisplay('warning', warningFrame);
+const emphasisUnderline = new UnderlineDisplay(`~`);
+manager.registerDisplay(`emphasis`, emphasisUnderline);
+const highlightFrame = new FrameDisplay(`+`);
+manager.registerDisplay(`highlight`, highlightFrame);
+const warningFrame = new FrameDisplay(`#`);
+manager.registerDisplay(`warning`, warningFrame);
 
 // Require to display
-const display1 = manager.getDisplay('emphasis');
-display1.show('Nice to meet you.');
-const display2 = manager.getDisplay('highlight');
-display2.show('Nice to meet you.');
-const display3 = manager.getDisplay('warning');
-display3.show('Nice to meet you.');
+const display1 = manager.getDisplay(`emphasis`);
+display1.show(`Nice to meet you.`);
+const display2 = manager.getDisplay(`highlight`);
+display2.show(`Nice to meet you.`);
+const display3 = manager.getDisplay(`warning`);
+display3.show(`Nice to meet you.`);

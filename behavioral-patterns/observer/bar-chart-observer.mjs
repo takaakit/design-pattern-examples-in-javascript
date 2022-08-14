@@ -24,11 +24,7 @@ export class BarChartObserver extends Observer {
         // ˅
         // Before processing, it checks to make sure the changed subject is the subject held.
         if (changedSubject === this.numberSubject) {
-            let barChart = 'Bar chart: ';
-            for (let i = 0; i < this.numberSubject.value; i++) {
-                barChart += '*';
-            }
-            console.log(barChart);
+            console.log(`Bar chart: ${`*`.repeat(this.numberSubject.value)}`);
         }
         // ˄
     }

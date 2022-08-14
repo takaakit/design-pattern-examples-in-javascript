@@ -7,9 +7,9 @@ import { Display } from './display.mjs';
 import { MultiLineDisplay } from './multi-line-display.mjs';
 import { TextDisplayImpl } from './text-display-impl.mjs';
 
-const d1 = new Display(new TextDisplayImpl('Japan'));
+const d1 = new Display(new TextDisplayImpl(`Japan`));
 d1.output();
 
-const d2 = new MultiLineDisplay(new TextDisplayImpl('The United States of America'));
+const d2 = new MultiLineDisplay(new TextDisplayImpl(`The United States of America`));
 d2.output();
 d2.outputMultiple(3);

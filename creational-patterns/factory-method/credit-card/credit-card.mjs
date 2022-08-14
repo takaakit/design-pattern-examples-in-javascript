@@ -16,13 +16,13 @@ export class CreditCard extends Product {
         // ˅
         super();
         this.owner = owner;
-        console.log('Make ' + this.owner + '\'s card.');
+        console.log(`Make ${this.owner}'s card.`);
         // ˄
     }
 
     use() {
         // ˅
-        console.log('Use ' + this.owner + '\'s card.');
+        console.log(`Use ${this.owner}'s card.`);
         // ˄
     }
 

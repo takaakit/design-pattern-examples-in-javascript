@@ -22,17 +22,17 @@ export class PlainTextBuilder extends Builder {
     // Make a title of plain text
     createTitle(title) {
         // ˅
-        this.builder.push('--------------------------------');  // Decoration line
-        this.builder.push('[' + title + ']');                   // Title
-        this.builder.push('');                                  // Blank line
+        this.builder.push(`--------------------------------`);  // Decoration line
+        this.builder.push(`[${title}]`);                        // Title
+        this.builder.push(``);                                  // Blank line
         // ˄
     }
 
     // Make a section of plain text
     createSection(section) {
         // ˅
-        this.builder.push('* ' + section);                      // Section
-        this.builder.push('');                                  // Blank line
+        this.builder.push(`* ${section}`);                      // Section
+        this.builder.push(``);                                  // Blank line
         // ˄
     }
 
@@ -40,22 +40,22 @@ export class PlainTextBuilder extends Builder {
     createItems(items) {
         // ˅
         for (let item of items) {
-            this.builder.push('  - ' + item);                   // Items
+            this.builder.push(`  - ${item}`);                   // Items
         }
-        this.builder.push('');                                  // Blank line
+        this.builder.push(``);                                  // Blank line
         // ˄
     }
 
     close() {
         // ˅
-        this.builder.push('--------------------------------');  // Decoration line
+        this.builder.push(`--------------------------------`);  // Decoration line
         // ˄
     }
 
     // String to output
     getContent() {
         // ˅
-        return this.builder.join('\n');
+        return this.builder.join(`\n`);
         // ˄
     }
 

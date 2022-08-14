@@ -14,7 +14,6 @@ export class Subject {
     constructor() {
         // ˅
         this.observers = new Array();
-        this._value = 0;
         // ˄
     }
 

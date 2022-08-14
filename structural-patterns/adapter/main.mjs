@@ -12,6 +12,6 @@ or display it as follows.
 
 import { PrintMessageDisplay } from './print-message-display.mjs';
 
-const p = new PrintMessageDisplay('Nice to meet you');
+const p = new PrintMessageDisplay(`Nice to meet you`);
 p.printWeak();
 p.printStrong();

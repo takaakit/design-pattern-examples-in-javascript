@@ -40,14 +40,14 @@ Please enter digits (ex. 1212123): 123
 import { LargeSizeString } from './large-size-string.mjs';
 import rl from 'readline';
 
-console.log('Please enter digits (ex. 1212123):');
+console.log(`Please enter digits (ex. 1212123):`);
 
 const readline = rl.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-readline.question('', (data) => {
+readline.question(``, (data) => {
     const input = data;
     readline.close();
 

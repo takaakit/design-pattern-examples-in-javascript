@@ -23,7 +23,7 @@ export class Program extends Node {
 
     parse(context) {
         // ˅
-        context.slideToken('program');
+        context.slideToken(`program`);
 
         const aCommandList = new CommandList();
         aCommandList.parse(context);
@@ -34,7 +34,7 @@ export class Program extends Node {
 
     toString() {
         // ˅
-        return ('[program ' + this.commandList + ']');
+        return (`[program ${this.commandList}]`);
         // ˄
     }
 

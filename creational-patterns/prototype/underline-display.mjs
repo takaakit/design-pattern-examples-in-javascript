@@ -27,13 +27,8 @@ export class UnderlineDisplay extends Display {
 
     show(message) {
         // ˅
-        const length = message.length;
-        console.log('"' + message + '"');
-        process.stdout.write(' ');
-        for (let i = 0; i < length; i++) {
-            process.stdout.write(this.underlineChar);
-        }
-        console.log();
+        console.log(`"${message}"`);
+        console.log(` ${this.underlineChar.repeat(message.length)}`);
         // ˄
     }
 

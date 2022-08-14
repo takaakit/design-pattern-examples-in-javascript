@@ -35,25 +35,25 @@ export class DaytimeState extends State {
 
     use(context) {
         // ˅
-        context.recordSecurityLog('Use a safe in the daytime');
+        context.recordSecurityLog(`Use a safe in the daytime`);
         // ˄
     }
 
     alarm(context) {
         // ˅
-        context.callSecurityGuardsRoom('Sound an emergency bell in the daytime');
+        context.callSecurityGuardsRoom(`Sound an emergency bell in the daytime`);
         // ˄
     }
 
     phone(context) {
         // ˅
-        context.callSecurityGuardsRoom('Make a normal call in the daytime');
+        context.callSecurityGuardsRoom(`Make a normal call in the daytime`);
         // ˄
     }
 
     toString() {
         // ˅
-        return '[Daytime]';
+        return `[Daytime]`;
         // ˄
     }
 

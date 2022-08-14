@@ -21,7 +21,7 @@ export class HandSignal {
     static handSignals = [new HandSignal(HandSignal.ROCK), new HandSignal(HandSignal.SCISSORS), new HandSignal(HandSignal.PAPER)];
 
     // Characters of the hands
-    static handName = ['Rock', 'Scissors', 'Paper'];
+    static handName = [`Rock`, `Scissors`, `Paper`];
 
     // Values of rock, scissors and paper.
     value;
