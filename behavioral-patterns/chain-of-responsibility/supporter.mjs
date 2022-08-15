@@ -52,14 +52,14 @@ export class Supporter {
     // Trouble was supported.
     supported(trouble) {
         // ˅
-        console.log(trouble.toString() + " was handled by " + this.name + ".");
+        console.log(`${trouble.toString()} was handled by ${this.name}.`);
         // ˄
     }
 
     // Trouble was unsupported.
     unsupported(trouble) {
         // ˅
-        console.log(trouble.toString() + " was not handled.");
+        console.log(`${trouble.toString()} was not handled.`);
         // ˄
     }
 
