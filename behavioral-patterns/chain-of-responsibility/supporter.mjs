@@ -28,7 +28,7 @@ export class Supporter {
         if (this.canHandle(trouble)) {
             this.supported(trouble);
         }
-        else if (this.next != null) {
+        else if (this.next !== null) {
             this.next.support(trouble);
         }
         else {

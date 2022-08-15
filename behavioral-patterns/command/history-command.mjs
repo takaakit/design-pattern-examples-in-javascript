@@ -39,7 +39,7 @@ export class HistoryCommand extends Command {
     // Delete the last command
     undo() {
         // ˅
-        if (this.pastCommands.length != 0) {
+        if (this.pastCommands.length !== 0) {
             this.pastCommands.pop();
         }
         // ˄

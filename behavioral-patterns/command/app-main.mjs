@@ -27,6 +27,7 @@ export class AppMain {
 
     constructor() {
         // ˅
+        this.isDragging = false;
         this.canvas = document.getElementById(`canvas`);
         this.undoButton = document.getElementById(`undoButton`)
         this.clearButton = document.getElementById(`clearButton`)
@@ -54,9 +55,9 @@ export class AppMain {
         if(this.isDragging){
             const paintingPosX = event.clientX - this.canvas.getBoundingClientRect().left;
             const paintingPosY = event.clientY - this.canvas.getBoundingClientRect().top ;
-            const paintingCommand = new PaintingCommand(this.paintingCanvas, paintingPosX, paintingPosY);
-            this.history.add(paintingCommand);
-            paintingCommand.execute();
+            const command = new PaintingCommand(this.paintingCanvas, paintingPosX, paintingPosY);
+            this.history.add(command);
+            command.execute();
         }
         // ˄
     }

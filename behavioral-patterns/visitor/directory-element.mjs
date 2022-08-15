@@ -39,11 +39,11 @@ export class DirectoryElement extends FileSystemElement {
 
     get size() {
         // ˅
-        let value = 0;
+        let size = 0;
         for (let element of this.elements) {
-            value += element.size;
+            size += element.size;
         }
-        return value;
+        return size;
         // ˄
     }
 
