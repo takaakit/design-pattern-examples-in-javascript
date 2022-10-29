@@ -46,7 +46,7 @@ export class Supporter {
     }
 
     canHandle(trouble) {
-        throw new Error('An abstract method has been executed.');
+        throw new Error(`An abstract method has been executed.`);
     }
 
     // Trouble was supported.
