@@ -17,7 +17,7 @@ export class HistoryCommand extends Command {
     constructor() {
         // ˅
         super();
-        this.pastCommands = new Array();
+        this.pastCommands = [];
         // ˄
     }
 

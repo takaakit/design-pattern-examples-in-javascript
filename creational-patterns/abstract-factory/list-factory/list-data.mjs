@@ -18,7 +18,7 @@ export class ListData extends Data {
 
     toHTML() {
         // ˅
-        const htmlData = new Array();
+        const htmlData = [];
         htmlData.push(`<li>${this.name}<ul>`);
         for (let item of this.items) {
             htmlData.push(item.toHTML());

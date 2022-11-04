@@ -15,7 +15,7 @@ export class PlainTextBuilder extends Builder {
     constructor() {
         // ˅
         super();
-        this.builder = new Array();
+        this.builder = [];
         // ˄
     }
 

@@ -15,7 +15,7 @@ export class Data extends Item {
     constructor(name) {
         // ˅
         super(name);
-        this.items = new Array();
+        this.items = [];
         // ˄
     }
 

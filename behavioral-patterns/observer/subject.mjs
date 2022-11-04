@@ -13,7 +13,7 @@ export class Subject {
 
     constructor() {
         // ˅
-        this.observers = new Array();
+        this.observers = [];
         // ˄
     }
 

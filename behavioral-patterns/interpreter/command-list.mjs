@@ -16,7 +16,7 @@ export class CommandList extends Node {
     constructor() {
         // ˅
         super();
-        this.nodes = new Array();
+        this.nodes = [];
         // ˄
     }
 

@@ -21,7 +21,7 @@ export class Page {
         // ˅
         this.title = title;
         this.author = author;
-        this.contents = new Array();
+        this.contents = [];
         // ˄
     }
 

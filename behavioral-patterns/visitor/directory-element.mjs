@@ -19,7 +19,7 @@ export class DirectoryElement extends FileSystemElement {
         // ˅
         super();
         this._name = name;
-        this.elements = new Array();
+        this.elements = [];
         // ˄
     }
 
