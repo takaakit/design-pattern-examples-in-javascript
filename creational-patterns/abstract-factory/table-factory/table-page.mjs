@@ -18,7 +18,7 @@ export class TablePage extends Page {
 
     toHTML() {
         // ˅
-        const htmlData = new Array();
+        const htmlData = [];
         htmlData.push(`<html><head><title>${this.title}</title></head><body>\n`);
         htmlData.push(`<h1>${this.title}</h1>\n`);
         htmlData.push(`<table width="80%" border="3">\n`);

@@ -18,7 +18,7 @@ export class TableData extends Data {
 
     toHTML() {
         // ˅
-        const htmlData = new Array();
+        const htmlData = [];
         htmlData.push(`<td><table width="100%" border="2">\n`);
         htmlData.push(`<tr><td bgcolor="#00CC00" align="center" colspan="${this.items.length}"><b>${this.name}</b></td></tr>\n`);
         htmlData.push(`<tr>\n`);

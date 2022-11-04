@@ -18,7 +18,7 @@ export class ListPage extends Page {
 
     toHTML() {
         // ˅
-        const htmlData = new Array();
+        const htmlData = [];
         htmlData.push(`<html><head><title>${this.title}</title></head>`);
         htmlData.push(`<body><h1>${this.title}</h1>`);
         htmlData.push(`<ul>`);
