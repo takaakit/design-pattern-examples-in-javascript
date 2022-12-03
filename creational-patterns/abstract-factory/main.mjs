@@ -20,7 +20,7 @@ readline.question(``, (data) => {
     const input = Number(data);
     readline.close();
     if (isNaN(input)) {
-        console.log(`Unexpected value.`);
+        console.error(`Unexpected value.`);
         process.exit(1);
     }
 
@@ -33,7 +33,7 @@ readline.question(``, (data) => {
             factory = new TableFactory();
             break;
         default:
-            console.log(`The value is not 1 or 2.`);
+            console.error(`The value is not 1 or 2.`);
             process.exit(1);
     }
 
